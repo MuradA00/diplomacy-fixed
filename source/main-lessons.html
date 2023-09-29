@@ -1,0 +1,3086 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+  @include('partials/head.html')
+
+  <body>
+    <header class="header bordered">
+      <div class="container">
+        <div
+          class="d-flex align-items-center flex-wrap header-body justify-content-lg-between"
+        >
+          <a href="/" class="col-lg-4 col-6 header-logo">
+            <picture
+              ><source
+                srcset="img/header/header-logo.webp"
+                type="image/webp" />
+              <img src="img/header/header-logo.png" alt="logo"
+            /></picture>
+          </a>
+          <nav
+            class="col-12 col-lg-6 col-xl-4 justify-content-center justify-content-lg-end justify-content-xl-start nav"
+          >
+            <ul class="d-flex align-items-center nav-list">
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Уроки</a>
+              </li>
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Подкасти</a>
+              </li>
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Блог</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="d-flex align-items-center col col-lg-5 header-second-row justify-content-end"
+          >
+            <div class="custom-lang custom-lang--header me-5">
+              <div class="custom-lang-selected">
+                <picture
+                  ><source
+                    srcset="img/flags/no-round-ua-flag.webp"
+                    type="image/webp" />
+                  <img
+                    class="custom-lang-flag"
+                    src="img/flags/no-round-ua-flag.png"
+                    alt="flag-icon"
+                /></picture>
+                <span class="custom-lang-text">Українська</span>
+                <div>
+                  <svg
+                    class="custom-lang-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill=""
+                  >
+                    <circle opacity="0.2" cx="10" cy="10" r="10" fill="" />
+                    <path
+                      d="M14 9L10 13L6 9"
+                      stroke=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="custom-lang-hidden">
+                <ul class="custom-lang-list">
+                  <li class="custom-lang-item">
+                    <picture
+                      ><source
+                        srcset="img/flags/ae-flag.webp"
+                        type="image/webp" />
+                      <img
+                        class="custom-lang-flag"
+                        src="img/flags/ae-flag.png"
+                        alt="flag-icon"
+                    /></picture>
+                    <span class="custom-lang-text custom-lang-text--hidden"
+                      >Арабська</span
+                    >
+                  </li>
+                  <li class="custom-lang-item">
+                    <picture
+                      ><source
+                        srcset="img/flags/eng-flag.webp"
+                        type="image/webp" />
+                      <img
+                        class="custom-lang-flag"
+                        src="img/flags/eng-flag.png"
+                        alt="flag-icon"
+                    /></picture>
+                    <span class="custom-lang-text custom-lang-text--hidden"
+                      >Англійська</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button
+              aria-label="Button to login"
+              class="button-primary button-primary--filled button-primary--md gap-2 log-in-btn ms-auto ms-lg-0 py-3"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5005 18.9583H7.50052C6.40052 18.9583 5.48386 18.8499 4.70886 18.6166C4.42553 18.5333 4.24219 18.2583 4.25886 17.9666C4.46719 15.4749 6.9922 13.5166 10.0005 13.5166C13.0088 13.5166 15.5255 15.4666 15.7422 17.9666C15.7672 18.2666 15.5838 18.5333 15.2922 18.6166C14.5172 18.8499 13.6005 18.9583 12.5005 18.9583ZM5.60053 17.5499C6.15053 17.6583 6.77552 17.7083 7.50052 17.7083H12.5005C13.2255 17.7083 13.8505 17.6583 14.4005 17.5499C13.9588 15.9499 12.1338 14.7666 10.0005 14.7666C7.8672 14.7666 6.0422 15.9499 5.60053 17.5499Z"
+                    fill=""
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.57824 2.57922C3.6903 1.46716 5.35437 1.04199 7.49935 1.04199H12.4993C14.6443 1.04199 16.3084 1.46716 17.4204 2.57922C18.5325 3.69128 18.9577 5.35535 18.9577 7.50033V12.5003C18.9577 14.1258 18.7148 15.4704 18.1161 16.511C17.5026 17.5772 16.5531 18.2597 15.2863 18.6183C15.1067 18.6692 14.9138 18.6372 14.7604 18.531C14.6069 18.4248 14.5089 18.2556 14.4933 18.0697C14.3457 16.3261 12.4935 14.767 9.99943 14.767C7.50546 14.767 5.653 16.3261 5.50546 18.0697C5.48972 18.2556 5.39174 18.4248 5.23829 18.531C5.08484 18.6372 4.89198 18.6692 4.71244 18.6183C3.44562 18.2597 2.49612 17.5772 1.88262 16.511C1.28392 15.4704 1.04102 14.1258 1.04102 12.5003V7.50033C1.04102 5.35535 1.46618 3.69128 2.57824 2.57922ZM3.46212 3.4631C2.69918 4.22604 2.29102 5.47863 2.29102 7.50033V12.5003C2.29102 14.0248 2.52312 15.1177 2.96607 15.8876C3.2937 16.457 3.75638 16.8839 4.40357 17.1799C5.02392 15.0077 7.38136 13.517 9.99943 13.517C12.6176 13.517 14.9748 15.0077 15.5951 17.1799C16.2423 16.8839 16.705 16.457 17.0326 15.8876C17.4756 15.1177 17.7077 14.0248 17.7077 12.5003V7.50033C17.7077 5.47863 17.2995 4.22604 16.5366 3.4631C15.7736 2.70016 14.521 2.29199 12.4993 2.29199H7.49935C5.47766 2.29199 4.22507 2.70016 3.46212 3.4631ZM9.99935 6.45866C8.69452 6.45866 7.64102 7.51218 7.64102 8.81699C7.64102 10.1241 8.69677 11.1837 9.99935 11.1837C11.3019 11.1837 12.3577 10.1241 12.3577 8.81699C12.3577 7.51218 11.3042 6.45866 9.99935 6.45866ZM6.39102 8.81699C6.39102 6.82183 8.00417 5.20866 9.99935 5.20866C11.9945 5.20866 13.6077 6.82183 13.6077 8.81699C13.6077 10.8099 11.9968 12.4337 9.99935 12.4337C8.00191 12.4337 6.39102 10.8099 6.39102 8.81699Z"
+                    fill=""
+                  />
+                  <path
+                    d="M9.99896 12.434C8.00729 12.434 6.39062 10.809 6.39062 8.81732C6.39062 6.82567 8.00729 5.20898 9.99896 5.20898C11.9906 5.20898 13.6073 6.82567 13.6073 8.81732C13.6073 10.809 11.9906 12.434 9.99896 12.434ZM9.99896 6.45898C8.69896 6.45898 7.64063 7.51733 7.64063 8.81732C7.64063 10.1257 8.69896 11.184 9.99896 11.184C11.299 11.184 12.3573 10.1257 12.3573 8.81732C12.3573 7.51733 11.299 6.45898 9.99896 6.45898Z"
+                    fill=""
+                  />
+                </svg>
+              </span>
+              <span class="fw-bold text-clr-1 lh-1 log-in-btn__text">
+                Особистий кабінет
+              </span>
+            </button>
+            <div class="d-none is-logged">
+              <div class="is-logged__inner">
+                <div class="is-logged__icon">
+                  <span class="fw-bold text-clr-1 ff-sec">О</span>
+                </div>
+                <div class="is-logged__hey">
+                  <span class="fw-semibold d-block">Раді бачити, </span>
+                  <span class="fw-bold d-block">Оксано</span>
+                </div>
+              </div>
+              <button
+                aria-label="Button to log-out"
+                class="d-flex align-items-center justify-content-center d-none is-logged__btn"
+              >
+                <picture
+                  ><source
+                    srcset="img/header/log-out-icon.webp"
+                    type="image/webp" />
+                  <img
+                    src="img/header/log-out-icon.png"
+                    width="16"
+                    height="17"
+                    alt="log-out-icon"
+                /></picture>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="main-lessons">
+        <div class="container">
+          <div class="breadcrumps d-flex align-items-center fw-semibold gap-2">
+            <a href="/" class="d-flex align-items-center gap-2">
+              <picture
+                ><source srcset="img/audio/home.webp" type="image/webp" />
+                <img src="img/audio/home.png" width="16" alt="arrow"
+              /></picture>
+              <span class="breadcrumps__main">Головна /</span>
+            </a>
+            <div class="breadcrumpts__current">Уроки</div>
+          </div>
+          <div class="main-lessons__wrapper d-flex">
+            <div class="col-xl-3 col-12">
+              <div class="main-lessons-left-top-box">
+                <h2 class="fw-bold audio-lessons-title">УРОК 1</h2>
+                <div class="audio-lessons-text__box d-flex">
+                  <div
+                    class="fw-bold audio-lessons-subtext ff-sec"
+                    style="margin-right: 2.5rem"
+                  >
+                    ВАШ РЕЗУЛЬТАТ
+                  </div>
+                  <div class="ff-sec fw-bold audio-lessons-percent">
+                    <span>67</span> %
+                  </div>
+                </div>
+              </div>
+              <div
+                class="audio-top__progress d-none main-lessons-left-top-audio-top__progress"
+              >
+                <div
+                  class="audio-top-progress__items justify-content-between d-flex gap-1"
+                >
+                  <div class="audio-top-progress-item active"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                </div>
+                <div class="audio-top-progress__list fw-bold">
+                  <span>1/</span><span>15</span>
+                </div>
+              </div>
+              <div class="audio-tabs-mob-sp__box">
+                <div class="audio-tabs--mob fw-bold">
+                  <div
+                    class="audio-tabs-mob-choise d-flex justify-content-between"
+                  >
+                    <span>Урок 1</span>
+                    <picture
+                      ><source
+                        srcset="img/audio/angle-down.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/audio/angle-down.png"
+                        width="8"
+                        alt="arrow"
+                    /></picture>
+                  </div>
+                  <div class="audio-tabs-mob-dropdown">
+                    <div class="audio-tabs-mob-dropdown-item">Урок 1</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 2</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 3</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 4</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 5</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 6</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 7</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 8</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 9</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 10</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 11</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 12</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 13</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 14</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 15</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 16</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 17</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 18</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 19</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 20</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 21</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 22</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 23</div>
+                    <div class="audio-tabs-mob-dropdown-item">Урок 24</div>
+                  </div>
+                </div>
+                <div
+                  class="audio-top-dp d-flex align-items-center justify-content-center fw-bold d-none"
+                >
+                  Мій словник
+                </div>
+              </div>
+              <div class="audio-aside__field--dictionary-lessons--box">
+                <div class="audio__aside__back"></div>
+                <div
+                  class="audio-aside__field--dictionary audio-aside__field--item"
+                >
+                  <div class="audio-aside__field--dictionary-close">
+                    <picture
+                      ><source
+                        srcset="img/audio/close.webp"
+                        type="image/webp" />
+                      <img src="img/audio/close.png" width="13" alt="close"
+                    /></picture>
+                  </div>
+                  <div
+                    class="audio-aside-field-dictionary__title fw-bold ff-sec"
+                  >
+                    МІЙ СЛОВНИК
+                  </div>
+                  <div
+                    class="audio-aside-field-dictionary__words d-flex justify-content-between align-items-center"
+                  >
+                    <div
+                      class="audio-aside-field-dictionary-words__add fw-bold"
+                    >
+                      Додано 9 слів
+                    </div>
+                    <div
+                      class="audio-aside-field-dictionary-words__clean-all fw-semibold"
+                    >
+                      Очистити все
+                    </div>
+                  </div>
+
+                  <div
+                    class="audio-aside-field-dictionary__add d-flex align-items-center justify-content-center"
+                  >
+                    <input type="text" />
+                    <div class="audio-aside-field-dictionary__btn" tooltip="Додайте слово і натисніть Enter">
+                      <picture
+                        ><source
+                          srcset="img/audio/plus.webp"
+                          type="image/webp" />
+                        <img src="img/audio/plus.png" width="12" alt="arrow"
+                      /></picture>
+                    </div>
+						  <div class="audio-aside-field-dictionary__added d-flex align-items-center">
+							<div class="audio-aside-field-dictionary-added__img">
+								<picture
+                        ><source
+                          srcset="img/"
+                          type="img/main-lessons/green-mark.webp" />
+                        <img src="img/main-lessons/green-mark.svg" width="20" alt="arrow"
+                      /></picture>
+							</div>
+							<div class="audio-aside-field-dictionary-added__text">Слово додане</div>
+						  </div>
+                  </div>
+
+						<div class="audio-aside-field-dictionary__list">
+							<div
+							class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+						 >
+						 <div class="aafdli__box d-flex justify-content-between">
+							  <div class="aafdli__left">
+								  <div class="aafdli-left__icon aafdli-left__icon-see">
+									  <picture
+							  ><source
+								 srcset="img/main-overview/eye.webp"
+								 type="image/webp" />
+							  <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+							/></picture>
+								  </div>
+								  <div class="aafdli-left__icon aafdli-left__icon--unsee">
+									  <picture
+							  ><source
+								 srcset="img/main-overview/eye-gray.webp"
+								 type="image/webp" />
+							  <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+							/></picture>
+								  </div>
+							  </div>
+								 <div class="aafdli__right">
+								  <div
+							  class="audio-aside-field-dictionary-list__item--text"
+							>
+							  لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+							</div>
+							<div
+							  class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+							>
+							Сучасний світ
+							</div>
+						  </div>
+						 </div>
+						 <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+						 </div>
+						 <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+							 Надзвичайний
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+						  <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+                        Молодий
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+						  <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+							 Якісний
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+
+                  </div>
+
+                  <div
+                    class="audio-aside-field-dictionary__see-all text-center fw-semibold"
+                  >
+                  <span> Розгорнути словник</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-12 main-lessons__content">
+              <div class="audio-top__progress d-flex">
+                <div
+                  class="audio-top-progress__items justify-content-between d-flex gap-1"
+                >
+                  <div class="audio-top-progress-item active"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                </div>
+                <div class="audio-top-progress__list fw-bold">
+                  <span>1/</span><span>15</span>
+                </div>
+              </div>
+              <div class="main-lessons-banner">
+                <div class="main-lessons-banner__img">
+                  <picture
+                    ><source
+                      srcset="img/main-lessons/banner.webp"
+                      type="image/webp" />
+                    <img src="img/main-lessons/banner.png" alt="arrow"
+                  /></picture>
+                </div>
+                <div class="main-lessons-banner__content">
+                  <h1 class="main-lessons-banner__title fw-semibold ff-sec">
+                    إِنَّهَا حَرْبٌ عُدْوَانِيَّةٌ وَحْشِيَّةٌ
+                  </h1>
+                  <div class="main-lessons-banner__subtitle ff-sec">
+                    الدَّرْسُ الأَوَّلُ
+                  </div>
+                  <div class="main-lessons-banner__info--title ff-sec fw-bold">
+                    НАЙГІРША КРАЇНА ТА, В ЯКІЙ НЕМАЄ ДРУЗІВ
+                  </div>
+                  <div
+                    class="main-lessons-banner__info--subtitle ff-sec fw-bold"
+                  >
+                    إِنَّهَا حَرْبٌ عُدْوَانِيَّةٌ وَحْشِيَّةٌ
+                  </div>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="main-lessons-item__text fw-bold">
+                  Повторіть скоромовку за диктором
+                </div>
+                <div
+                  class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                >
+                  <div
+                    class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                  >
+                    <div
+                      class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/audio/start.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/audio/start.png"
+                          width="11"
+                          alt="arrow"
+                      /></picture>
+                      <div class="line"></div>
+                    </div>
+                    <div
+                      class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                    >
+                      <div class="aelli__time fw-semibold">0:40</div>
+                      <div class="aelli__line">
+                        <div class="aelli-line__move">
+                          <div class="aelli-line-move__line"></div>
+                        </div>
+                      </div>
+                      <div class="aelli__all-time fw-bold">1:43</div>
+                    </div>
+                  </div>
+                  <div class="audio-expirience-listen__right d-flex gap-2">
+                    <div class="audio-expirience-liste-right__box d-flex gap-2">
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                      >
+                        1x
+                      </div>
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                      >
+                        1.5x
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="audio-text__field text-end">
+                  إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="main-lessons-item__text fw-bold">
+                  Прослухайте, прочитайте і перекладіть текст
+                </div>
+                <div
+                  class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                >
+                  <div
+                    class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                  >
+                    <div
+                      class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/audio/start.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/audio/start.png"
+                          width="11"
+                          alt="arrow"
+                      /></picture>
+                      <div class="line"></div>
+                    </div>
+                    <div
+                      class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                    >
+                      <div class="aelli__time fw-semibold">0:40</div>
+                      <div class="aelli__line">
+                        <div class="aelli-line__move">
+                          <div class="aelli-line-move__line"></div>
+                        </div>
+                      </div>
+                      <div class="aelli__all-time fw-bold">1:43</div>
+                    </div>
+                  </div>
+                  <div class="audio-expirience-listen__right d-flex gap-2">
+                    <div class="audio-expirience-liste-right__box d-flex gap-2">
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                      >
+                        1x
+                      </div>
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                      >
+                        1.5x
+                      </div>
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/sybmol.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/sybmol.png"
+                            width="23"
+                            alt="symbol"
+                        /></picture>
+                      </div>
+                      <div
+                        class="audio-top-tr d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        Переклад
+                        <picture
+                          ><source
+                            srcset="img/audio/translate.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/translate.svg"
+                            width="20"
+                            alt="arrow"
+                        /></picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="audio-text__field text-end">
+                  إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا نزاعًا،
+                  كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية وحشية. لقد أتت
+                  القوات الروسية إلى أرضنا وتريد غزو شعبنا. ولوْلا الحربُ
+                  الروسية ضد أوكرانيا، لَما كان هناك نقص في سوق المواد الغذائية.
+                  ولولا الحرب الروسية، لما عانى الناس في إفريقيا وآسيا وأماكن
+                  أخرى من العالم من ارتفاع كارثي في أسعار المواد الغذائية...
+                  وببساطة لم يكن من الممكن أن يحدث أبدًا مثلُ هذا الارتفاع
+                  الكارثي في الأسعار.
+                </div>
+                <div
+                  class="audio-aside__field--translate audio-aside__field--item"
+                >
+                  Це війна! Війна Росії проти України. Це не криза і не
+                  конфлікт, як іноді її називають. Це жорстока агресивна війна.
+                  Російські війська прийшли на нашу землю і хочуть поневолити
+                  наш народ. Якби не російська війна проти України, то не було б
+                  дефіциту на продовольчому ринку. Якби не російська війна, то
+                  люди в Африці, Азії та деінде у світі не страждали б від
+                  катастрофічного зростання цін на продукти… Та й просто ніколи
+                  не було б можливим таке катастрофічне зростання цін.
+                </div>
+					 <div
+                        class="audio-top-tr d-flex align-items-center justify-content-center fw-bold batt d-none"
+                      >
+                        Переклад
+                        <picture
+                          ><source
+                            srcset="img/audio/translate.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/translate.svg"
+                            width="20"
+                            alt="arrow"
+                        /></picture>
+                      </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>1</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Прослухайте, прочитайте і перекладіть текст
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons__correct d-flex flex-column gap-1">
+                  <!-- item -->
+                  <div
+                    class="main-lessons-correct__item d-flex justify-content-between align-items-center"
+                  >
+                    <div class="main-lessons-correct-item__left d-flex">
+                      <div class="main-lessons-correct-item-left__item fw-bold">
+                        خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-left__item fw-bold second"
+                      >
+                        صحيح
+                      </div>
+                    </div>
+                    <div
+                      class="main-lessons-correct-item__right d-flex align-items-center"
+                    >
+                      <div class="main-lessons-correct-item-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا وَآسِيَا وَأَمَاكِنَ
+                        أُخْرَى مِنَ العَالَمِ مِنِ ارْتِفَاعٍ كَارِثِيٍّ فِي
+                        أَسْعَارِ المَوَادِّ الغِذَائِيَّةِ بِسَبَبِ الجَفَافِ.
+                        صحيح / خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-right__num d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        1
+                      </div>
+                    </div>
+                  </div>
+                  <!-- item -->
+                  <div
+                    class="main-lessons-correct__item d-flex justify-content-between align-items-center correct"
+                  >
+                    <div class="main-lessons-correct-item__left d-flex">
+                      <div class="main-lessons-correct-item-left__item fw-bold">
+                        خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-left__item fw-bold second active"
+                      >
+                        صحيح
+                      </div>
+                    </div>
+                    <div
+                      class="main-lessons-correct-item__right d-flex align-items-center"
+                    >
+                      <div class="main-lessons-correct-item-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا وَآسِيَا وَأَمَاكِنَ
+                        أُخْرَى مِنَ العَالَمِ مِنِ ارْتِفَاعٍ كَارِثِيٍّ فِي
+                        أَسْعَارِ المَوَادِّ الغِذَائِيَّةِ بِسَبَبِ الجَفَافِ.
+                        صحيح / خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-right__num d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        2
+                      </div>
+                    </div>
+                  </div>
+                  <!-- item -->
+                  <div
+                    class="main-lessons-correct__item d-flex justify-content-between align-items-center incorrectly"
+                  >
+                    <div class="main-lessons-correct-item__left d-flex">
+                      <div class="main-lessons-correct-item-left__item fw-bold active">
+                        خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-left__item fw-bold second"
+                      >
+                        صحيح
+                      </div>
+                    </div>
+                    <div
+                      class="main-lessons-correct-item__right d-flex align-items-center"
+                    >
+                      <div class="main-lessons-correct-item-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا وَآسِيَا وَأَمَاكِنَ
+                        أُخْرَى مِنَ العَالَمِ مِنِ ارْتِفَاعٍ كَارِثِيٍّ فِي
+                        أَسْعَارِ المَوَادِّ الغِذَائِيَّةِ بِسَبَبِ الجَفَافِ.
+                        صحيح / خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-right__num d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
+                  <!-- item -->
+                  <div
+                    class="main-lessons-correct__item d-flex default justify-content-between align-items-center"
+                  >
+                    <div class="main-lessons-correct-item__left d-flex">
+                      <div class="main-lessons-correct-item-left__item fw-bold">
+                        خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-left__item fw-bold second"
+                      >
+                        صحيح
+                      </div>
+                    </div>
+                    <div
+                      class="main-lessons-correct-item__right d-flex align-items-center"
+                    >
+                      <div class="main-lessons-correct-item-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا وَآسِيَا وَأَمَاكِنَ
+                        أُخْرَى مِنَ العَالَمِ مِنِ ارْتِفَاعٍ كَارِثِيٍّ فِي
+                        أَسْعَارِ المَوَادِّ الغِذَائِيَّةِ بِسَبَبِ الجَفَافِ.
+                        صحيح / خطأ
+                      </div>
+                      <div
+                        class="main-lessons-correct-item-right__num d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        4
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--correct">
+                   <span>Скинути</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>2</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Оберіть правильний варіант відповіді
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-choise-correct d-flex flex-column">
+                  <div
+                    class="main-lessons-choise-correct__top d-flex align-items-center ms-auto"
+                  >
+						<div class="main-lessons-choise-correct__top--box d-flex">
+							<div class="main-lessons-choise-correct-top__text first">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="main-lessons-choise-correct-top__word">...</div>
+                    <div class="main-lessons-choise-correct-top__text">
+                      يُعَانِي
+                    </div>
+                    <div class="main-lessons-choise-correct-top__word">
+                      ضِدَّ أُوكْرَانِيَا
+                    </div>
+                    <div class="main-lessons-choise-correct-top__text">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+						</div>
+
+						  <div class="main-lessons-choise-correct-top__num--box">
+							<div
+                      class="main-lessons-choise-correct-top__num d-flex align-items-center justify-content-center"
+                    >
+                      1
+                    </div>
+						  </div>
+
+                  </div>
+                  <div class="main-lessons-choise-correct__list mlccl d-flex">
+                    <div class="mlccl__item">
+                      <label class="mlccl__item__box">
+                        <input type="checkbox" class="check-highload" />
+                        <span class="highload2"></span>
+                        <div class="mlccl__item__box--text fw-semibold">
+                          ضِدَّ أُوكْرَانِيَا
+                        </div>
+                      </label>
+                    </div>
+                    <div class="mlccl__item">
+                      <label class="mlccl__item__box">
+                        <input type="checkbox" class="check-highload" />
+                        <span class="highload2"></span>
+                        <div class="mlccl__item__box--text fw-semibold">
+                          ضِدَّ أُوكْرَانِيَا
+                        </div>
+                      </label>
+                    </div>
+                    <div class="mlccl__item">
+                      <label class="mlccl__item__box">
+                        <input type="checkbox" class="check-highload" />
+                        <span class="highload2"></span>
+                        <div class="mlccl__item__box--text fw-semibold">
+                          ضِدَّ أُوكْرَانِيَا
+                        </div>
+                      </label>
+                    </div>
+                    <div class="mlccl__item">
+                      <label class="mlccl__item__box">
+                        <input type="checkbox" class="check-highload" />
+                        <span class="highload2"></span>
+                        <div class="mlccl__item__box--text fw-semibold">
+                          ضِدَّ أُوكْرَانِيَا
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button class="main-lessons-correct-send__btn fw-bold">
+							<span>Скинути</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>2</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Складіть речення
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div
+                  class="main-lessons-item__complete-offer d-flex flex-column"
+                >
+                  <div
+                    class="main-lessons-item-compelete-offer__item mlicof d-flex justify-content-between"
+                  >
+                    <div class="mlicof__left d-flex">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlicof__right d-flex align-items-center">
+                      <div class="mlicof-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div
+                        class="mlicof-right__num d-flex align-items-center justify-content-center"
+                      >
+                        1
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item-compelete-offer__item mlicof d-flex justify-content-between"
+                  >
+                    <div class="mlicof__left d-flex">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlicof__right d-flex align-items-center">
+                      <div class="mlicof-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div
+                        class="mlicof-right__num d-flex align-items-center justify-content-center"
+                      >
+                        2
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item-compelete-offer__item mlicof d-flex justify-content-between"
+                  >
+                    <div class="mlicof__left d-flex">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlicof__right d-flex align-items-center">
+                      <div class="mlicof-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div
+                        class="mlicof-right__num d-flex align-items-center justify-content-center"
+                      >
+                        3
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item-compelete-offer__item mlicof d-flex justify-content-between"
+                  >
+                    <div class="mlicof__left d-flex">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlicof__right d-flex align-items-center">
+                      <div class="mlicof-right__text">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div
+                        class="mlicof-right__num d-flex align-items-center justify-content-center"
+                      >
+                        4
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+                    <span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>3</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Оберіть речення де є зайве слово
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__excess d-flex flex-column">
+                  <div
+                    class="main-lessons-item__excess-point mliep d-flex justify-content-end"
+                  >
+						<div class="main-lessons-item__excess-point__box d-flex gap-2">
+							<div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">
+                      رُوسِيَا ضِدَّ أُوكْرَانِيَا
+                    </div>
+                    <div class="mliep__text fw-semibold">
+                      ضِدَّ أُوكْرَانِيَا
+                    </div>
+						</div>
+
+                    <div
+                      class="mliep__num d-flex justify-content-center align-items-center"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item__excess-point mliep d-flex justify-content-end"
+                  >
+						<div class="main-lessons-item__excess-point__box d-flex gap-2">
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">
+                      رُوسِيَا ضِدَّ أُوكْرَانِيَا
+                    </div>
+                    <div class="mliep__text fw-semibold">
+                      ضِدَّ أُوكْرَانِيَا
+                    </div></div>
+                    <div
+                      class="mliep__num d-flex justify-content-center align-items-center"
+                    >
+                      2
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item__excess-point mliep  d-flex justify-content-end"
+                  >
+						<div class="main-lessons-item__excess-point__box d-flex gap-2">
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">
+                      رُوسِيَا ضِدَّ أُوكْرَانِيَا
+                    </div>
+                    <div class="mliep__text fw-semibold">
+                      ضِدَّ أُوكْرَانِيَا
+                    </div></div>
+                    <div
+                      class="mliep__num d-flex justify-content-center align-items-center"
+                    >
+                      3
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item__excess-point mliep default d-flex justify-content-end"
+                  >
+						<div class="main-lessons-item__excess-point__box d-flex gap-2">
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">لَيْسَتْ</div>
+                    <div class="mliep__text fw-semibold">
+                      رُوسِيَا ضِدَّ أُوكْرَانِيَا
+                    </div>
+                    <div class="mliep__text fw-semibold">
+                      ضِدَّ أُوكْرَانِيَا
+                    </div></div>
+                    <div
+                      class="mliep__num d-flex justify-content-center align-items-center"
+                    >
+                      4
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--mliep">
+                     <span>Скинути</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>6</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Знайдіть заміну номерованому слову
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__word--change d-flex flex-column">
+                  <div
+                    class="main-lessons-item-word-change__item mliwci d-flex align-items-center justify-content-end"
+                  >
+                    <div class="mliwci__word">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwci__change">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">...</div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                ...
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mliwci__word">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item-word-change__item mliwci d-flex align-items-center justify-content-end"
+                  >
+                    <div class="mliwci__word">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwci__change">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">...</div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mliwci__word">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwci__change">
+                      <div class="select">
+                        <div class="selectWrapper">
+                          <div class="selectCustom js-selectCustom">
+                            <div class="selectCustom-trigger">...</div>
+                            <div class="selectCustom-options">
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="ds"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="fe"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="be"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="qa"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                              <div
+                                class="selectCustom-option fw-semibold"
+                                data-value="un"
+                              >
+                                لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button class="main-lessons-correct-send__btn fw-bold">
+                     <span>Скинути</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>7</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Перекладіть арабською мовою пронумеровані слова і
+                  словосполучення та підберіть відповідне слово
+                </div>
+                <div class="main-lessont-item__text--info">
+                  Для коректної автоматичної перевірки Ваших відповідей пишіть
+                  без оголосів, дотримуйтесь правопису хамзи, уникайте
+                  хибодруків
+                </div>
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__write d-flex flex-column">
+                  <div
+                    class="main-lessons-item-write__box mliwb d-flex justify-content-end align-items-center"
+                  >
+                    <div class="mliwb__text">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwb__input">
+                      <input
+                        type="text"
+                        name="#"
+                        id="#"
+                        placeholder="Могутня"
+                      />
+                    </div>
+                    <div class="mliwb__text">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                  </div>
+                  <div
+                    class="main-lessons-item-write__box mliwb d-flex justify-content-end align-items-center"
+                  >
+                    <div class="mliwb__text">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwb__input">
+                      <input
+                        type="text"
+                        name="#"
+                        id="#"
+                        placeholder="Створили"
+                      />
+                    </div>
+                    <div class="mliwb__text">
+                      يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                    </div>
+                    <div class="mliwb__input">
+                      <input type="text" name="#" id="#" placeholder="Війна" />
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+						<span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>8</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Розставте слова в правильному порядку, щоб утворити речення
+                </div>
+
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__order">
+                  <div class="main-lessons-item-order__box d-flex">
+                    <div class="main-lessons-item-order__content mlioc">
+                      <div
+                        class="mlioc__list d-flex flex-wrap justify-content-end mx-auto"
+                      >
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                        <div class="mlioc-list__item">
+                          <label class="mlccl__item__box">
+                            <input type="checkbox" class="check-highload" />
+                            <span class="highload2"></span>
+                            <div class="mlccl__item__box--text fw-semibold">
+                              لَيْسَتْ أَزْمَةً، وَلَا نِزَاعًا
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="mlioc__result"></div>
+                    </div>
+                    <div
+                      class="main-lessons-item-order__num d-flex align-items-center justify-content-center fw-bold"
+                    >
+                      1
+                    </div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+						<span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>9</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Знайдіть зайве слово в кожному рядку
+                </div>
+
+                <div class="main-lessons-item__head"></div>
+                <div
+                  class="main-lessons-item__less mlil d-flex align-items-end flex-column"
+                >
+                  <div class="mlil__item d-flex align-items-center">
+                    <div class="mlil-item__text d-flex align-items-center">
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">
+                          يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                        </div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">الممكن أن</div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">
+                          يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                        </div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlil-item__num">1</div>
+                  </div>
+                  <div class="mlil__item d-flex align-items-center">
+                    <div class="mlil-item__text d-flex align-items-center">
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">
+                          يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                        </div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">الممكن أن</div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                      <div class="mlil-item-text__item">
+                        <div class="mlil-item-text-item__text">
+                          يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                        </div>
+                        <div class="mlil-item-text-item__mark">
+                          <picture
+                            ><source
+                              srcset="img/main-lessons/mark-white.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/main-lessons/mark-white.svg"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlil-item__num">2</div>
+                  </div>
+                </div>
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+                  <span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>10</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Трансформуйте дієслова минулого часу в дієслова теперішнього
+                  часу і навпаки та зазначте масдар
+                </div>
+
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__transform mlit">
+                  <div
+                    class="mlit__item d-flex justify-content-between align-items-center"
+                  >
+                    <div class="mlit__left d-flex">
+                      <div class="mlit-left__item">
+                        <div class="mlit-left-item__text">Масдар</div>
+                        <input type="text" class="mlit-left-item__field" />
+                      </div>
+                      <div class="mlit-left__item">
+                        <div class="mlit-left-item__text">Дієслово</div>
+                        <input type="text" class="mlit-left-item__field" />
+                      </div>
+                    </div>
+                    <div class="mlit__right d-flex align-items-center">
+                      <div class="mlit-right__word">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div class="mlit-right__num">1</div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mlit__item d-flex justify-content-between align-items-center"
+                  >
+                    <div class="mlit__left d-flex">
+                      <div class="mlit-left__item">
+                        <input type="text" class="mlit-left-item__field" />
+                      </div>
+                      <div class="mlit-left__item">
+                        <input type="text" class="mlit-left-item__field" />
+                      </div>
+                    </div>
+                    <div class="mlit__right d-flex align-items-center">
+                      <div class="mlit-right__word">
+                        يُعَانِي النَّاسُ فِي إِفْرِيقِيَا
+                      </div>
+                      <div class="mlit-right__num">2</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+						<span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>11</span>
+                </div>
+                <div class="main-lessons-item__text fw-bold">
+                  Знайдіть найбільш влучний арабський відповідник до українських
+                  речень
+                </div>
+
+                <div class="main-lessons-item__head"></div>
+                <div class="main-lessons-item__more-correct mlimc">
+                  <div class="mlimc__item d-flex justify-content-end">
+                    <div class="mlimc__left d-flex flex-column align-items-end">
+                      <div class="mlimc-left__title">
+                        Україна бореться на боці демократії та свободи,
+                        захищаючи весь цивілізований світ від російської
+                        агресії. 
+                      </div>
+                      <div class="mlimc-left__choise d-flex flex-column">
+                        <div class="mlimc-left-choise__item">
+                          <p>
+                            <input type="radio" id="test2" name="radio-group" />
+                            <label for="test2"
+                              >حدث أبدا مثل هذا الارتفاع الكارثي في
+                              الأسعار.</label
+                            >
+                          </p>
+                        </div>
+                        <div class="mlimc-left-choise__item">
+                          <p>
+                            <input type="radio" id="test3" name="radio-group" />
+                            <label for="test3"
+                              >حدث أبدا مثل هذا الارتفاع الكارثي في
+                              الأسعار.</label
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mlimc__right">
+                      <div class="mlit-right__num">1</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="main-lessons-correct__send">
+                  <button
+                    class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check"
+                  >
+						<span>Перевірити</span>
+                  </button>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>12</span>
+                </div>
+                <div class="main-lesson__bold fw-bold">
+                  1. Прочитайте текст уроку разом із диктором. Почніть із
+                  повільного темпу, потім перейдіть на звичайний. Намагайтеся
+                  максимально точно відтворити вимову, інтонацію, темп
+                </div>
+                <div class="main-lesson__bold fw-bold">
+                  2. Запишіть себе на диктофон, прослухайте аудіозапис і
+                  порівняйте його з начиткою диктором (зверніть увагу на вимову,
+                  інтонацію, темп). За потреби повторіть вправу ще декілька
+                  разів для коригування недоліків. Збережіть запис, щоб згодом
+                  відстежити свій прогрес.
+                </div>
+                <div class="main-lesson-audio-exercise-slider__item">
+                  <div
+                    class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                    >
+                      <div
+                        class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/start.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/start.png"
+                            width="11"
+                            alt="arrow"
+                        /></picture>
+                        <div class="line"></div>
+                      </div>
+                      <div
+                        class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                      >
+                        <div class="aelli__time fw-semibold">0:40</div>
+                        <div class="aelli__line"></div>
+                        <div class="aelli__all-time fw-bold">1:43</div>
+                      </div>
+                    </div>
+                    <div class="audio-expirience-listen__right d-flex gap-2">
+                      <div
+                        class="audio-expirience-liste-right__box d-flex gap-2"
+                      >
+                        <div
+                          class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                        >
+                          1x
+                        </div>
+                        <div
+                          class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                        >
+                          1.5x
+                        </div>
+                      </div>
+
+                      <div
+                        class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/sybmol.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/sybmol.png"
+                            width="23"
+                            alt="symbol"
+                        /></picture>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="audio-expirience-voice__left d-flex align-items-center"
+                    >
+                      <div
+                        class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/microphone.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/microphone.png"
+                            width="24"
+                            alt="arrow"
+                        /></picture>
+                      </div>
+                      <div
+                        class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                      >
+                        <div class="aelli__record-line">
+                          <picture
+                            ><source
+                              srcset="img/audio/record-line.webp"
+                              type="image/webp" />
+                            <img src="img/audio/record-line.png" alt="arrow"
+                          /></picture>
+                        </div>
+                        <div class="aelli__all-time fw-bold">1:40</div>
+                      </div>
+                    </div>
+                    <div class="audio-expirience-voice__right d-flex">
+                      <div
+                        class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/trash.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/trash.svg"
+                            width="23"
+                            alt="trash"
+                        /></picture>
+                      </div>
+                      <button
+                        class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download d-flex"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/download.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/download.svg"
+                            width="18"
+                            alt="download"
+                        /></picture>
+                        <div
+                          class="main-lessons-item__audio-icon-download--text fw-bold"
+                        >
+                          Завантажити
+                        </div>
+                      </и>
+                    </div>
+                  </div>
+
+                  <div class="audio-text__field text-end">
+                    إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                    نزاعًا، كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية وحشية.
+                    لقد أتت القوات الروسية إلى أرضنا وتريد غزو شعبنا. ولوْلا
+                    الحربُ الروسية ضد أوكرانيا، لَما كان هناك نقص في سوق ا هذا
+                  </div>
+                </div>
+              </div>
+              <div class="main-lessons-item">
+                <div class="audio-exercise__num fw-semibold">
+                  Вправа
+                  <span>13</span>
+                </div>
+                <div class="main-lesson__bold fw-bold">
+                  Виконайте усний послідовний переклад тексту уроку без зорової
+                  опори, прослуховуючи аудіозапис фрагментами. Повторіть вправу
+                  декілька разів, щоразу збільшуючи тривалість фрагментів (ви
+                  також можете обирати різний темп)
+                </div>
+                <div class="main-lessons-item__record">
+                  <div
+                    class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                    >
+                      <div
+                        class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/start.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/start.png"
+                            width="11"
+                            alt="arrow"
+                        /></picture>
+                        <div class="line"></div>
+                      </div>
+                      <div
+                        class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                      >
+                        <div class="aelli__time fw-semibold">0:40</div>
+                        <div class="aelli__line">
+                          <div class="aelli-line__move">
+                            <div class="aelli-line-move__line"></div>
+                          </div>
+                        </div>
+                        <div class="aelli__all-time fw-bold">1:43</div>
+                      </div>
+                    </div>
+                    <div class="audio-expirience-listen__right d-flex gap-2">
+                      <div
+                        class="audio-expirience-liste-right__box d-flex gap-2"
+                      >
+                        <div
+                          class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                        >
+                          1x
+                        </div>
+                        <div
+                          class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                        >
+                          1.5x
+                        </div>
+                        <div
+                          class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                        >
+                          <picture
+                            ><source
+                              srcset="img/audio/sybmol.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/audio/sybmol.png"
+                              width="23"
+                              alt="symbol"
+                          /></picture>
+                        </div>
+                        <div
+                          class="audio-top-tr d-flex align-items-center justify-content-center fw-bold"
+                        >
+                          Переклад
+                          <picture
+                            ><source
+                              srcset="img/audio/translate.webp"
+                              type="image/webp" />
+                            <img
+                              src="img/audio/translate.svg"
+                              width="20"
+                              alt="arrow"
+                          /></picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                  >
+                    <div
+                      class="audio-expirience-voice__left d-flex align-items-center"
+                    >
+                      <div
+                        class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/microphone.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/microphone.png"
+                            width="24"
+                            alt="arrow"
+                        /></picture>
+                      </div>
+                      <div
+                        class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                      >
+                        <div class="aelli__record-line">
+                          <picture
+                            ><source
+                              srcset="img/audio/record-line.webp"
+                              type="image/webp" />
+                            <img src="img/audio/record-line.png" alt="arrow"
+                          /></picture>
+                        </div>
+                        <div class="aelli__all-time fw-bold">1:40</div>
+                      </div>
+                    </div>
+                    <div class="audio-expirience-voice__right d-flex">
+                      <div
+                        class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/trash.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/trash.svg"
+                            width="23"
+                            alt="trash"
+                        /></picture>
+                      </div>
+                      <button
+                        class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download d-flex"
+                      >
+                        <picture
+                          ><source
+                            srcset="img/audio/download.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/download.svg"
+                            width="18"
+                            alt="download"
+                        /></picture>
+                        <div
+                          class="main-lessons-item__audio-icon-download--text fw-bold"
+                        >
+                          Завантажити
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="main-lessons-item-record-voice d-flex justify-content-center"
+                  >
+                    <div class="main-lessons-item-record-voice__icon">
+                      <picture
+                        ><source
+                          srcset="img/main-lessons/microphone.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/main-lessons/microphone.png"
+                          width="24"
+                          alt="download"
+                      /></picture>
+                    </div>
+
+                    <div class="main-lessons-item-record-voice__text fw-bold">
+                      Записати свій голос
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+				  <div class="main-lessons-item--box">
+					<div class="main-lessons-item__yourself__content">
+						<div class="main-lessons-item">
+							<div class="audio-exercise__num fw-semibold">
+							  Вправа
+							  <span>14</span>
+							</div>
+							<div class="main-lesson__bold fw-bold">
+							  Письмово складіть запитання арабською на тему уроку. Відповіді
+							  на них сукупно мають передати зміст тексту української мовою.
+							</div>
+							<div class="main-lessons-item__head"></div>
+							<div
+							  class="main-lessons-item__ques d-flex justify-content-between"
+							>
+							  <div class="main-lessons-item-ques__left mliql">
+								 <div class="mliql__text">
+									Це війна! Війна Росії проти України. Це не криза і не
+									конфлікт, як іноді її називають. Це жорстока агресивна
+									війна. Російські війська прийшли на нашу землю і хочуть
+									поневолити наш народ. Якби не російська війна проти
+									України, то не було б дефіциту на продовольчому ринку.
+									Якби не російська війна, то люди в Африці, Азії та деінде
+									у світі не страждали б від катастрофічного зростання цін
+									на продукти… Та й просто ніколи не було б можливим таке
+									катастрофічне зростання цін.
+								 </div>
+							  </div>
+							  <div class="main-lessons-item-ques__right mliqr">
+								 <div class="mliql__box">
+									<textarea placeholder="Ваше запитання"></textarea>
+									<div class="mliql__gpt">Chat GPT друкує...</div>
+								 </div>
+								 <button
+									class="main-lessons-correct-send__btn fw-bold main-lessons-correct-send__btn--check mliqr-reset"
+								 >
+								 <span>
+								  Запитати у Chat GPT
+								 </span>
+
+								 </button>
+							  </div>
+							</div>
+						 </div>
+						 <div class="main-lessons-item">
+							<div class="audio-exercise__num fw-semibold">
+							  Вправа
+							  <span>15</span>
+							</div>
+							<div class="main-lessons-item__text fw-bold">
+							  Спробуйте усно перевести текст уроку власними словами не
+							  спираючись на нього
+							</div>
+							<div class="main-lessons-item__head reverse"></div>
+						 </div>
+						 <div class="main-lessons-item">
+							<div class="audio-exercise__num fw-semibold">
+							  Вправа
+							  <span>16</span>
+							</div>
+							<div class="main-lessons-item__text fw-bold">
+							  Домашнє читання: дізнайтеся більше про тему уроку з арабських
+							  медіаджерел
+							</div>
+							<div class="main-lessons-item__head"></div>
+							<div class="main-lessons-item__homework d-flex flex-column">
+							  <div class="mlih__item">
+								 شدد ممثل سمو أمير البلاد الشيخ نواف الأحمد، سمو ولي العهد
+								 الشيخ مشعل الأحمد على تعزيز التضامن العربي؛ لمواجهة المخاطر
+								 والتحديات المتزايدة، لافتاً سموه إلى التبعات الخطيرة على
+								 دولنا «لاستمرار بعض الاضطرابات في العالم».
+							  </div>
+							  <div class="mlih__item">
+								 شدد ممثل سمو أمير البلاد الشيخ نواف الأحمد، سمو ولي العهد
+								 الشيخ مشعل الأحمد على تعزيز التضامن العربي؛ لمواجهة المخاطر
+								 والتحديات المتزايدة، لافتاً سموه إلى التبعات الخطيرة على
+								 دولنا «لاستمرار بعض الاضطرابات في العالم».
+							  </div>
+							  <div class="mlih__item">
+								 شدد ممثل سمو أمير البلاد الشيخ نواف الأحمد، سمو ولي العهد
+								 الشيخ مشعل الأحمد على تعزيز التضامن العربي؛ لمواجهة المخاطر
+								 والتحديات المتزايدة، لافتاً سموه إلى التبعات الخطيرة على
+								 دولنا «لاستمرار بعض الاضطرابات في العالم».
+							  </div>
+							  <div class="mlih__item">
+								 شدد ممثل سمو أمير البلاد الشيخ نواف الأحمد، سمو ولي العهد
+								 الشيخ مشعل الأحمد على تعزيز التضامن العربي؛ لمواجهة المخاطر
+								 والتحديات المتزايدة، لافتاً سموه إلى التبعات الخطيرة على
+								 دولنا «لاستمرار بعض الاضطرابات في العالم».
+							  </div>
+							  <div class="mlih__item">
+								 شدد ممثل سمو أمير البلاد الشيخ نواف الأحمد، سمو ولي العهد
+								 الشيخ مشعل الأحمد على تعزيز التضامن العربي؛ لمواجهة المخاطر
+								 والتحديات المتزايدة، لافتاً سموه إلى التبعات الخطيرة على
+								 دولنا «لاستمرار بعض الاضطرابات في العالم».
+							  </div>
+							  <a
+								 href="https://www.alqabas.com/article/"
+								 class="main-lessons-item-homework__link"
+								 >https://www.alqabas.com/article/</a
+							  >
+							</div>
+						 </div>
+					</div>
+				  <div
+                  class="main-lessons-item__yourself d-flex align-items-center justify-content-center"
+                >
+                  <div class="main-lessons-item-yourself__text fw-bold">
+                    Самостійна робота
+                  </div>
+                  <div class="main-lessons-item-yourself__icon">
+                    <picture
+                      ><source
+                        srcset="img/main-lessons/angle-down-brown.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/main-lessons/angle-down-brown.png"
+                        width="8"
+                        alt="download"
+                    /></picture>
+                  </div>
+                </div>
+					</div>
+
+              <div class="main-lessons-item">
+                <div
+                  class="main-lessons-item-footer__top d-flex align-items-center justify-content-between"
+                >
+                  <div
+                    class="main-lessons-item-footer-top__title ff-sec fw-bold"
+                  >
+                    ВАШ РЕЗУЛЬТАТ <span>67%</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="main-lessons-item-footer-top__next mliftn d-flex"
+                  >
+                    <div class="mliftn__text fw-bold">Наступний урок</div>
+                    <div class="mliftn__icon">
+                      <picture
+                        ><source
+                          srcset="
+                            img/main-lessons/main-lessons-footer-next-icon.webp
+                          "
+                          type="image/webp" />
+                        <img
+                          src="img/main-lessons/main-lessons-footer-next-icon.svg"
+                          alt="download"
+                          width="6px"
+                      /></picture>
+                    </div>
+                  </a>
+                </div>
+                <div class="main-lessons-item-footer__center mlifc">
+                  <div class="mlifc__title ff-sec fw-bold">
+                    ВИКЛАДАЧІ АРАБСЬКОЇ ШКОЛИ ЯСМІН
+                  </div>
+                  <div class="mlifc__subtitle ff-sec fw-bold">
+                    ГОТОВІ ВІДПОВІСТИ НА БУДЬ-ЯКІ ВАШІ ЗАПИТАННЯ
+                  </div>
+                  <div class="mlifc__btns">
+                    <a href="#" class="mlifc__btn mlifc-btn__first"
+                      ><span>Написати викладачеві</span></a
+                    >
+                    <a href="#" class="mlifc__btn mlifc-btn__second"
+                      ><span>Перейти на сайт</span></a
+                    >
+                  </div>
+                  <div class="mlifc__img">
+                    <picture
+                      ><source
+                        srcset="
+                          img/main-lessons/main-lessons-footer-img.webp
+                        "
+                        type="image/webp" />
+                      <img
+                        src="img/main-lessons/main-lessons-footer-img.png"
+                        alt="download"
+                    /></picture>
+                  </div>
+                </div>
+                <div
+                  class="main-lessons-item-footer__bottom mlifb d-flex justify-content-between"
+                >
+                  <div class="mlifb__title ff-sec fw-bold">ЦІКАВО ЗНАТИ</div>
+                  <div class="mlifb__text fw-bold">
+                    Онлайн-ресурси на кшталт <a href="#">almaany.com</a> чи
+                    <a href="#">context.reverso.net</a> пропонують не лише
+                    тлумачення та контекстний переклад арабських слів і
+                    висловів, але й дієвідмінювання, добір синонімів або
+                    антонімів тощо.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container w-100">
+        <div
+          class="d-none position-relative bg-clr-2 d-lg-block footer-body rounded-bottom-4"
+        >
+          <a
+            href="#home"
+            class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn"
+          >
+            <div
+              class="d-flex align-items-center flex-column to-top-btn__inner"
+            >
+              <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+              <picture
+                ><source
+                  srcset="img/icons/arrow-to-top.webp"
+                  type="image/webp" />
+                <img src="img/icons/arrow-to-top.png" width="14" alt="arrow"
+              /></picture>
+            </div>
+          </a>
+          <div class="d-flex justify-content-between footer-top">
+            <div class="col-xxl-7 col-6">
+              <div class="d-flex">
+                <ul
+                  class="align-items-center gap-3 col-5 socials d-none d-xl-flex"
+                >
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/inst-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/inst-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <span class="d-block socials-divider"></span>
+                  </li>
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/tg-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/tg-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="me-5 col-5">
+                  <div
+                    class="custom-lang custom-lang--white"
+                    style="width: fit-content"
+                  >
+                    <div class="custom-lang-selected">
+                      <picture
+                        ><source
+                          srcset="img/flags/no-round-ua-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/no-round-ua-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text">Українська</span>
+                      <div>
+                        <svg
+                          class="custom-lang-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill=""
+                        >
+                          <circle opacity="1" cx="10" cy="10" r="10" fill="" />
+                          <path
+                            d="M14 9L10 13L6 9"
+                            stroke=""
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="custom-lang-hidden">
+                      <ul class="custom-lang-list">
+                        <li class="custom-lang-item">
+                          <picture
+                            ><source
+                              srcset="img/flags/ae-flag.webp"
+                              type="image/webp" />
+                            <img
+                              class="custom-lang-flag"
+                              src="img/flags/ae-flag.png"
+                              alt="flag-icon"
+                          /></picture>
+                          <span
+                            class="custom-lang-text custom-lang-text--hidden"
+                            >Арабська</span
+                          >
+                        </li>
+                        <li class="custom-lang-item">
+                          <picture
+                            ><source
+                              srcset="img/flags/eng-flag.webp"
+                              type="image/webp" />
+                            <img
+                              class="custom-lang-flag"
+                              src="img/flags/eng-flag.png"
+                              alt="flag-icon"
+                          /></picture>
+                          <span
+                            class="custom-lang-text custom-lang-text--hidden"
+                            >Англійська</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-logo-block">
+                <picture
+                  ><source
+                    srcset="img/footer/logo-min.webp"
+                    type="image/webp" />
+                  <img
+                    class="footer-logo mb-4"
+                    src="img/footer/logo-min.png"
+                    alt="footer-logo"
+                /></picture>
+                <div
+                  class="fw-bold ff-sec d-none d-xxl-block display-4 text-white uppercase"
+                  style="letter-spacing: -0.07rem"
+                >
+                  ДИПЛОМАТІЯ ВІЙНИ
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-between align-items-start col-6 col-xl-4"
+            >
+              <ul class="d-flex flex-column gap-4 footer-nav">
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Всі уроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Аудіоуроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Оглядовий урок
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Особистий кабінет
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Блог </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Рецензії </a>
+                </li>
+              </ul>
+              <div
+                class="d-flex flex-column justify-content-between align-items-start col-5 flex-xl-row h-100"
+              >
+                <a
+                  href="mailto:mail@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-mail-link"
+                >
+                  <picture
+                    ><source
+                      srcset="img/icons/email-icon.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/icons/email-icon.png"
+                      width="20"
+                      height="20"
+                      alt="email-link"
+                  /></picture>
+                  <span class="fw-bold text-white lh-1">Напишіть нам</span>
+                </a>
+                <ul
+                  class="d-flex align-items-center flex-column col-5 d-xl-none gap-3 socials"
+                >
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/inst-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/inst-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Instagram</span>
+                    </a>
+                  </li>
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/tg-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/tg-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center footer-bottom justify-content-between"
+          >
+            <div class="row col-6 col-xl-7">
+              <div class="d-none col-5 d-xl-block footer-rights p-0">
+                Посібник арабської мови. 2023
+              </div>
+              <div class="p-0 footer-rights col-4">© Всі права захищені</div>
+            </div>
+            <div class="align-items-center col-6 col-xl-4 row">
+              <a
+                href="#"
+                aria-label="Link to
+            contract offer"
+                class="p-0 footer-rights footer-bottom-link col-6"
+              >
+                Договір оферти
+              </a>
+              <ul class="d-flex col p-0" style="grid-gap: 2rem">
+                <li>
+                  <picture
+                    ><source
+                      srcset="img/footer/visa--white.webp"
+                      type="image/webp" />
+                    <img src="img/footer/visa--white.png" alt="visa-icon"
+                  /></picture>
+                </li>
+                <li>
+                  <picture
+                    ><source
+                      srcset="img/footer/master-card--white.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/footer/master-card--white.png"
+                      alt="mastercard-icon"
+                  /></picture>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-block bg-clr-2 d-lg-none footer-body position-relative rounded-bottom-4"
+        >
+          <a
+            href="#home"
+            class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn"
+          >
+            <div
+              class="d-flex align-items-center flex-column to-top-btn__inner"
+            >
+              <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+              <picture
+                ><source
+                  srcset="img/icons/arrow-to-top.webp"
+                  type="image/webp" />
+                <img src="img/icons/arrow-to-top.png" width="14" alt="arrow"
+              /></picture>
+            </div>
+          </a>
+          <div class="d-flex flex-column justify-content-between footer-top">
+            <div
+              class="d-flex justify-content-between align-items-start col-12"
+            >
+              <ul class="d-flex flex-column gap-4 footer-nav">
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Всі уроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Аудіоуроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Оглядовий урок
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Особистий кабінет
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Блог </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Рецензії </a>
+                </li>
+              </ul>
+              <div
+                class="custom-lang custom-lang--white"
+                style="width: fit-content"
+              >
+                <div class="custom-lang-selected">
+                  <picture
+                    ><source
+                      srcset="img/flags/no-round-ua-flag.webp"
+                      type="image/webp" />
+                    <img
+                      class="custom-lang-flag"
+                      src="img/flags/no-round-ua-flag.png"
+                      alt="flag-icon"
+                  /></picture>
+                  <span class="custom-lang-text">Українська</span>
+                  <div>
+                    <svg
+                      class="custom-lang-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill=""
+                    >
+                      <circle opacity="1" cx="10" cy="10" r="10" fill="" />
+                      <path
+                        d="M14 9L10 13L6 9"
+                        stroke=""
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-lang-hidden">
+                  <ul class="custom-lang-list">
+                    <li class="custom-lang-item">
+                      <picture
+                        ><source
+                          srcset="img/flags/ae-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/ae-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden"
+                        >Арабська</span
+                      >
+                    </li>
+                    <li class="custom-lang-item">
+                      <picture
+                        ><source
+                          srcset="img/flags/eng-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/eng-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden"
+                        >Англійська</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex" style="margin-top: 4.5rem">
+              <ul class="d-flex align-items-center col-12 gap-4 socials">
+                <li class="w-auto">
+                  <a
+                    class="d-flex align-items-center gap-2 socials-link"
+                    href="#"
+                    target="_blank"
+                    aria-label="Link to social media"
+                  >
+                    <picture
+                      ><source
+                        srcset="img/socials/inst-icon.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/socials/inst-icon.png"
+                        alt="social-media-icon"
+                    /></picture>
+                    <span class="socials-text">Instagram</span>
+                  </a>
+                </li>
+
+                <li class="w-auto">
+                  <a
+                    class="d-flex align-items-center gap-2 socials-link"
+                    href="#"
+                    target="_blank"
+                    aria-label="Link to social media"
+                  >
+                    <picture
+                      ><source
+                        srcset="img/socials/tg-icon.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/socials/tg-icon.png"
+                        alt="social-media-icon"
+                    /></picture>
+                    <span class="socials-text">Telegram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex align-items-center col-12 gap-3 mt-5">
+              <div>
+                <picture
+                  ><source
+                    srcset="img/footer/logo-min.webp"
+                    type="image/webp" />
+                  <img
+                    width="55"
+                    src="img/footer/logo-min.png"
+                    alt="footer-logo"
+                /></picture>
+              </div>
+              <div
+                class="d-flex flex-column justify-content-between h-100 flex-xl-row col"
+              >
+                <a
+                  href="mailto:mail@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-mail-link"
+                >
+                  <picture
+                    ><source
+                      srcset="img/icons/email-icon.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/icons/email-icon.png"
+                      width="20"
+                      height="20"
+                      alt="email-link"
+                  /></picture>
+                  <span class="fw-bold text-white lh-1">Напишіть нам</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center flex-column footer-bottom justify-content-between"
+          >
+            <ul class="d-flex col-12 mb-4 p-0" style="grid-gap: 2rem">
+              <li>
+                <picture
+                  ><source
+                    srcset="img/footer/visa--white.webp"
+                    type="image/webp" />
+                  <img
+                    width="52"
+                    src="img/footer/visa--white.png"
+                    alt="visa-icon"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><source
+                    srcset="img/footer/master-card--white.webp"
+                    type="image/webp" />
+                  <img
+                    width="102"
+                    src="img/footer/master-card--white.png"
+                    alt="mastercard-icon"
+                /></picture>
+              </li>
+            </ul>
+            <div class="d-flex gap-4 col-12">
+              <div class="p-0 footer-rights" style="font-size: 0.75rem">
+                © Всі права захищені
+              </div>
+              <a
+                href="#"
+                style="font-size: 0.75rem"
+                aria-label="Link to
+          contract offer"
+                class="p-0 footer-rights footer-bottom-link"
+              >
+                Договір оферти
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js?_v=20230822181325" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js?_v=20230822181325" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

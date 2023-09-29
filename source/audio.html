@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="Description" content="default" />
+    <title>Diplomacy of War</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap&_v=20230822181325"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css?_v=20230822181325"
+      integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.css?_v=20230822181325"
+      integrity="sha512-IDrCghMcNlJpdcNnzcr2oPjF4hipgtAg4pGP828ktpGasD4E3w8dsYAmrzs4rSVSXdDUiW4jgYoaQTvMijXZFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230822181325" />
+  </head>
+
+  <body>
+    <header class="header bordered">
+      <div class="container">
+        <div
+          class="d-flex align-items-center flex-wrap header-body justify-content-lg-between"
+        >
+          <a href="/" class="col-lg-4 col-6 header-logo">
+            <picture
+              ><source
+                srcset="img/header/header-logo.webp"
+                type="image/webp" />
+              <img src="img/header/header-logo.png" alt="logo"
+            /></picture>
+          </a>
+          <nav
+            class="col-12 col-lg-6 col-xl-4 justify-content-center justify-content-lg-end justify-content-xl-start nav"
+          >
+            <ul class="d-flex align-items-center nav-list">
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Уроки</a>
+              </li>
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Подкасти</a>
+              </li>
+              <li>
+                <a class="fw-bold text-clr-1 nav-link p-2" href="#">Блог</a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="d-flex align-items-center col col-lg-5 header-second-row justify-content-end"
+          >
+            <div class="custom-lang custom-lang--header me-5">
+              <div class="custom-lang-selected">
+                <picture
+                  ><source
+                    srcset="img/flags/no-round-ua-flag.webp"
+                    type="image/webp" />
+                  <img
+                    class="custom-lang-flag"
+                    src="img/flags/no-round-ua-flag.png"
+                    alt="flag-icon"
+                /></picture>
+                <span class="custom-lang-text">Українська</span>
+                <div>
+                  <svg
+                    class="custom-lang-arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill=""
+                  >
+                    <circle opacity="0.2" cx="10" cy="10" r="10" fill="" />
+                    <path
+                      d="M14 9L10 13L6 9"
+                      stroke=""
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="custom-lang-hidden">
+                <ul class="custom-lang-list">
+                  <li class="custom-lang-item">
+                    <picture
+                      ><source
+                        srcset="img/flags/ae-flag.webp"
+                        type="image/webp" />
+                      <img
+                        class="custom-lang-flag"
+                        src="img/flags/ae-flag.png"
+                        alt="flag-icon"
+                    /></picture>
+                    <span class="custom-lang-text custom-lang-text--hidden"
+                      >Арабська</span
+                    >
+                  </li>
+                  <li class="custom-lang-item">
+                    <picture
+                      ><source
+                        srcset="img/flags/eng-flag.webp"
+                        type="image/webp" />
+                      <img
+                        class="custom-lang-flag"
+                        src="img/flags/eng-flag.png"
+                        alt="flag-icon"
+                    /></picture>
+                    <span class="custom-lang-text custom-lang-text--hidden"
+                      >Англійська</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button
+              aria-label="Button to login"
+              class="button-primary button-primary--filled button-primary--md gap-2 log-in-btn ms-auto ms-lg-0 py-3"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5005 18.9583H7.50052C6.40052 18.9583 5.48386 18.8499 4.70886 18.6166C4.42553 18.5333 4.24219 18.2583 4.25886 17.9666C4.46719 15.4749 6.9922 13.5166 10.0005 13.5166C13.0088 13.5166 15.5255 15.4666 15.7422 17.9666C15.7672 18.2666 15.5838 18.5333 15.2922 18.6166C14.5172 18.8499 13.6005 18.9583 12.5005 18.9583ZM5.60053 17.5499C6.15053 17.6583 6.77552 17.7083 7.50052 17.7083H12.5005C13.2255 17.7083 13.8505 17.6583 14.4005 17.5499C13.9588 15.9499 12.1338 14.7666 10.0005 14.7666C7.8672 14.7666 6.0422 15.9499 5.60053 17.5499Z"
+                    fill=""
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.57824 2.57922C3.6903 1.46716 5.35437 1.04199 7.49935 1.04199H12.4993C14.6443 1.04199 16.3084 1.46716 17.4204 2.57922C18.5325 3.69128 18.9577 5.35535 18.9577 7.50033V12.5003C18.9577 14.1258 18.7148 15.4704 18.1161 16.511C17.5026 17.5772 16.5531 18.2597 15.2863 18.6183C15.1067 18.6692 14.9138 18.6372 14.7604 18.531C14.6069 18.4248 14.5089 18.2556 14.4933 18.0697C14.3457 16.3261 12.4935 14.767 9.99943 14.767C7.50546 14.767 5.653 16.3261 5.50546 18.0697C5.48972 18.2556 5.39174 18.4248 5.23829 18.531C5.08484 18.6372 4.89198 18.6692 4.71244 18.6183C3.44562 18.2597 2.49612 17.5772 1.88262 16.511C1.28392 15.4704 1.04102 14.1258 1.04102 12.5003V7.50033C1.04102 5.35535 1.46618 3.69128 2.57824 2.57922ZM3.46212 3.4631C2.69918 4.22604 2.29102 5.47863 2.29102 7.50033V12.5003C2.29102 14.0248 2.52312 15.1177 2.96607 15.8876C3.2937 16.457 3.75638 16.8839 4.40357 17.1799C5.02392 15.0077 7.38136 13.517 9.99943 13.517C12.6176 13.517 14.9748 15.0077 15.5951 17.1799C16.2423 16.8839 16.705 16.457 17.0326 15.8876C17.4756 15.1177 17.7077 14.0248 17.7077 12.5003V7.50033C17.7077 5.47863 17.2995 4.22604 16.5366 3.4631C15.7736 2.70016 14.521 2.29199 12.4993 2.29199H7.49935C5.47766 2.29199 4.22507 2.70016 3.46212 3.4631ZM9.99935 6.45866C8.69452 6.45866 7.64102 7.51218 7.64102 8.81699C7.64102 10.1241 8.69677 11.1837 9.99935 11.1837C11.3019 11.1837 12.3577 10.1241 12.3577 8.81699C12.3577 7.51218 11.3042 6.45866 9.99935 6.45866ZM6.39102 8.81699C6.39102 6.82183 8.00417 5.20866 9.99935 5.20866C11.9945 5.20866 13.6077 6.82183 13.6077 8.81699C13.6077 10.8099 11.9968 12.4337 9.99935 12.4337C8.00191 12.4337 6.39102 10.8099 6.39102 8.81699Z"
+                    fill=""
+                  />
+                  <path
+                    d="M9.99896 12.434C8.00729 12.434 6.39062 10.809 6.39062 8.81732C6.39062 6.82567 8.00729 5.20898 9.99896 5.20898C11.9906 5.20898 13.6073 6.82567 13.6073 8.81732C13.6073 10.809 11.9906 12.434 9.99896 12.434ZM9.99896 6.45898C8.69896 6.45898 7.64063 7.51733 7.64063 8.81732C7.64063 10.1257 8.69896 11.184 9.99896 11.184C11.299 11.184 12.3573 10.1257 12.3573 8.81732C12.3573 7.51733 11.299 6.45898 9.99896 6.45898Z"
+                    fill=""
+                  />
+                </svg>
+              </span>
+              <span class="fw-bold text-clr-1 lh-1 log-in-btn__text">
+                Особистий кабінет
+              </span>
+            </button>
+            <div class="d-none is-logged">
+              <div class="is-logged__inner">
+                <div class="is-logged__icon">
+                  <span class="fw-bold text-clr-1 ff-sec">О</span>
+                </div>
+                <div class="is-logged__hey">
+                  <span class="fw-semibold d-block">Раді бачити, </span>
+                  <span class="fw-bold d-block">Оксано</span>
+                </div>
+              </div>
+              <button
+                aria-label="Button to log-out"
+                class="d-flex align-items-center justify-content-center d-none is-logged__btn"
+              >
+                <picture
+                  ><source
+                    srcset="img/header/log-out-icon.webp"
+                    type="image/webp" />
+                  <img
+                    src="img/header/log-out-icon.png"
+                    width="16"
+                    height="17"
+                    alt="log-out-icon"
+                /></picture>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="audio">
+        <div class="container">
+          <div class="breadcrumps d-flex align-items-center fw-semibold gap-2">
+            <a href="/" class="d-flex align-items-center gap-2">
+              <picture
+                ><source srcset="img/audio/home.webp" type="image/webp" />
+                <img src="img/audio/home.png" width="16" alt="arrow"
+              /></picture>
+              <span class="breadcrumps__main">Головна /</span>
+            </a>
+            <div class="breadcrumpts__current">Аудіоуроки</div>
+          </div>
+
+          <div class="d-flex align-items-center audio-top">
+            <div
+              class="d-flex align-items-end gap-3 col-12 col-lg-10 audio-top__box"
+            >
+              <h2 class="fw-bold audio-lessons-title">АУДІОУРОКИ</h2>
+              <div class="audio-lessons-text__box d-flex">
+                <div
+                  class="fw-bold audio-lessons-subtext ff-sec"
+                  style="margin-right: 2.5rem"
+                >
+                  ВАШ РЕЗУЛЬТАТ
+                </div>
+                <div class="ff-sec fw-bold audio-lessons-percent">
+                  <span>67</span> %
+                </div>
+              </div>
+
+              <div class="audio-top__progress d-flex">
+                <div
+                  class="audio-top-progress__items justify-content-between d-flex gap-1"
+                >
+                  <div class="audio-top-progress-item active"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                  <div class="audio-top-progress-item"></div>
+                </div>
+                <div class="audio-top-progress__list"><span>1/</span>17</div>
+              </div>
+            </div>
+
+            <a href="#" class="col-12 ms-auto text-end fw-bold audio-list-link">
+              Список аудіо
+            </a>
+
+            <div class="audio-tabs--mob fw-bold">
+              <div class="audio-tabs-mob-choise d-flex justify-content-between">
+                <span>Урок 1</span>
+                <picture
+                  ><source
+                    srcset="img/audio/angle-down.webp"
+                    type="image/webp" />
+                  <img src="img/audio/angle-down.png" width="8" alt="arrow"
+                /></picture>
+              </div>
+              <div class="audio-tabs-mob-dropdown">
+                <div class="audio-tabs-mob-dropdown-item">Урок 1</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 2</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 3</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 4</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 5</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 6</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 7</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 8</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 9</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 10</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 11</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 12</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 13</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 14</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 15</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 16</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 17</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 18</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 19</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 20</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 21</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 22</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 23</div>
+                <div class="audio-tabs-mob-dropdown-item">Урок 24</div>
+              </div>
+            </div>
+
+            <div class="audio-top__dp d-flex">
+              <div
+                class="audio-top-dp d-flex align-items-center justify-content-center fw-bold"
+              >
+                Мій словник
+              </div>
+              <div
+                class="audio-top-tr d-flex align-items-center justify-content-center fw-bold"
+              >
+                Переклад
+                <picture
+                  ><source
+                    srcset="img/audio/translate.webp"
+                    type="image/webp" />
+                  <img src="img/audio/translate.svg" width="20" alt="arrow"
+                /></picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 audio-tabs-box col-12">
+            <div class="audio-tab active fw-bold"><span>Урок 1</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 2</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 3</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 4</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 5</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 6</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 7</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 8</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 9</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 10</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 11</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 12</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 13</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 14</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 15</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 16</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 17</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 18</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 19</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 20</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 21</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 22</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 23</span></div>
+            <div class="audio-tab fw-bold"><span>Урок 24</span></div>
+          </div>
+
+          <div class="audi-expirience-main--box">
+            <div
+              class="d-flex justify-content-between gap-3 audio-ex-main-wrap"
+            >
+              <div
+                class="audio-exercise__content--inner col-xxl-7 col-xl-8 col-lg-7 col-12"
+              >
+                <div class="audio__exercise">
+                  <div class="audio-exercise__slider">
+                    <div class="audio-exercise-slider__item">
+                      <div class="audio-exercise__num fw-semibold">
+                        Вправа
+                        <span>1</span>
+                      </div>
+                      <div class="audio-exercies__info fw-bold">
+                        Повторіть скоромовку за диктором
+                      </div>
+
+                      <div
+                        class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                        >
+                          <div
+                            class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/start.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/start.png"
+                                width="11"
+                                alt="arrow"
+                            /></picture>
+                            <div class="line"></div>
+                          </div>
+                          <div
+                            class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                          >
+                            <div class="aelli__time fw-semibold">0:40</div>
+                            <div class="aelli__line"></div>
+                            <div class="aelli__all-time fw-bold">1:43</div>
+                          </div>
+                        </div>
+                        <div
+                          class="audio-expirience-listen__right d-flex gap-2"
+                        >
+                          <div
+                            class="audio-expirience-liste-right__box d-flex gap-2"
+                          >
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                            >
+                              1x
+                            </div>
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                            >
+                              1.5x
+                            </div>
+                          </div>
+
+                          <div
+                            class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/sybmol.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/sybmol.png"
+                                width="23"
+                                alt="symbol"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-voice__left d-flex align-items-center"
+                        >
+                          <div
+                            class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/microphone.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/microphone.png"
+                                width="24"
+                                alt="arrow"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                          >
+                            <div class="aelli__record-line">
+                              <picture
+                                ><source
+                                  srcset="img/audio/record-line.webp"
+                                  type="image/webp" />
+                                <img
+                                  src="img/audio/record-line.png"
+                                  alt="arrow"
+                              /></picture>
+                            </div>
+                            <div class="aelli__all-time fw-bold">1:40</div>
+                          </div>
+                        </div>
+                        <div class="audio-expirience-voice__right d-flex">
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/trash.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/trash.svg"
+                                width="23"
+                                alt="trash"
+                            /></picture>
+                          </div>
+                          <button
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/download.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/download.svg"
+                                width="24"
+                                alt="download"
+                            /></picture>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="audio-text__field text-end">
+                        إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                        نزاعًا، كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية
+                        وحشية. لقد أتت القوات الروسية إلى أرضنا وتريد غزو شعبنا.
+                        ولوْلا الحربُ الروسية ضد أوكرانيا، لَما كان هناك نقص في
+                        سوق ا هذا
+                      </div>
+                      <div
+                        class="audio-aside__field--translate audio-aside__field--item active"
+                      >
+                        Це війна! Війна Росії проти України
+                      </div>
+                    </div>
+                    <div class="audio-exercise-slider__item">
+                      <div class="audio-exercise__num fw-semibold">
+                        Вправа
+                        <span>1</span>
+                      </div>
+                      <div class="audio-exercies__info fw-bold">
+                        Повторіть скоромовку за диктором
+                      </div>
+
+                      <div
+                        class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                        >
+                          <div
+                            class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/start.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/start.png"
+                                width="11"
+                                alt="arrow"
+                            /></picture>
+                            <div class="line"></div>
+                          </div>
+                          <div
+                            class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                          >
+                            <div class="aelli__time fw-semibold">0:40</div>
+                            <div class="aelli__line"></div>
+                            <div class="aelli__all-time fw-bold">1:43</div>
+                          </div>
+                        </div>
+                        <div
+                          class="audio-expirience-listen__right d-flex gap-2"
+                        >
+                          <div
+                            class="audio-expirience-liste-right__box d-flex gap-2"
+                          >
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                            >
+                              1x
+                            </div>
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                            >
+                              1.5x
+                            </div>
+                          </div>
+
+                          <div
+                            class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/sybmol.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/sybmol.png"
+                                width="23"
+                                alt="symbol"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-voice__left d-flex align-items-center"
+                        >
+                          <div
+                            class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/microphone.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/microphone.png"
+                                width="24"
+                                alt="arrow"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                          >
+                            <div class="aelli__record-line">
+                              <picture
+                                ><source
+                                  srcset="img/audio/record-line.webp"
+                                  type="image/webp" />
+                                <img
+                                  src="img/audio/record-line.png"
+                                  alt="arrow"
+                              /></picture>
+                            </div>
+                            <div class="aelli__all-time fw-bold">1:40</div>
+                          </div>
+                        </div>
+                        <div class="audio-expirience-voice__right d-flex">
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/trash.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/trash.svg"
+                                width="23"
+                                alt="trash"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/download.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/download.svg"
+                                width="24"
+                                alt="download"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="audio-text__field text-end">
+                        إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                        نزاعًا، كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية
+                        وحشية. لقد أتت القوات الروسية إلى أرضنا وتريد غزو شعبنا.
+                        ولوْلا الحربُ الروسية ضد أوكرانيا، لَما كان هناك نقص في
+                        سوق ا هذا
+                      </div>
+                      <div
+                        class="audio-aside__field--translate audio-aside__field--item active"
+                      >
+                        Це війна! Війна Росії проти України
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="audio-expirience__pages">
+                    <div class="audio-expirience-pages__list fw-bold d-flex">
+                      <div class="audio-expirience-pages-list">1/</div>
+                      <div class="audio-expirience-pages-list-all">2</div>
+                    </div>
+                    <div class="audio-expirience-pages__nav d-flex">
+                      <div
+                        class="audio-expirience-pages-nav__item active"
+                      ></div>
+                      <div class="audio-expirience-pages-nav__item"></div>
+                    </div>
+                    <div class="audio-expirience-pages__btns d-flex">
+                      <div
+                        class="audio-expirience-pages-btn-back d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        <span>Назад</span>
+                      </div>
+                      <div
+                        class="audio-expirience-pages-btn__next d-flex align-items-center justify-content-center fw-bold"
+                      >
+							 <span>Далі</span>
+							 <div class="audio-expirience-pages-btn__next__img">
+								<picture
+                          ><source
+                            srcset="img/audio/next-icon.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/next-icon.png"
+                            width="6"
+                            alt="download"
+                        /></picture>
+								<picture
+                          ><source
+                            srcset="img/audio/next-icon-blue.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/next-icon-blue.svg"
+                            width="10"
+                            alt="download"
+                        /></picture>
+
+							 </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="audio__exercise">
+                  <div class="audio-exercise__slider">
+                    <div class="audio-exercise-slider__item">
+                      <div class="audio-exercise__num fw-semibold">
+                        Вправа
+                        <span>1</span>
+                      </div>
+                      <div class="audio-exercies__info fw-bold">
+                        Повторіть скоромовку за диктором
+                      </div>
+
+                      <div
+                        class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                        >
+                          <div
+                            class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/start.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/start.png"
+                                width="11"
+                                alt="arrow"
+                            /></picture>
+                            <div class="line"></div>
+                          </div>
+                          <div
+                            class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                          >
+                            <div class="aelli__time fw-semibold">0:40</div>
+                            <div class="aelli__line"></div>
+                            <div class="aelli__all-time fw-bold">1:43</div>
+                          </div>
+                        </div>
+                        <div
+                          class="audio-expirience-listen__right d-flex gap-2"
+                        >
+                          <div
+                            class="audio-expirience-liste-right__box d-flex gap-2"
+                          >
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                            >
+                              1x
+                            </div>
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                            >
+                              1.5x
+                            </div>
+                          </div>
+
+                          <div
+                            class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/sybmol.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/sybmol.png"
+                                width="23"
+                                alt="symbol"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-voice__left d-flex align-items-center"
+                        >
+                          <div
+                            class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/microphone.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/microphone.png"
+                                width="24"
+                                alt="arrow"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                          >
+                            <div class="aelli__record-line">
+                              <picture
+                                ><source
+                                  srcset="img/audio/record-line.webp"
+                                  type="image/webp" />
+                                <img
+                                  src="img/audio/record-line.png"
+                                  alt="arrow"
+                              /></picture>
+                            </div>
+                            <div class="aelli__all-time fw-bold">1:40</div>
+                          </div>
+                        </div>
+                        <div class="audio-expirience-voice__right d-flex">
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/trash.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/trash.svg"
+                                width="23"
+                                alt="trash"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/download.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/download.svg"
+                                width="24"
+                                alt="download"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="audio-text__field text-end">
+                        إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                        نزاعًا، كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية
+                        وحشية. لقد أتت القوات الروسية إلى أرضنا وتريد غزو شعبنا.
+                        ولوْلا الحربُ الروسية ضد أوكرانيا، لَما كان هناك نقص في
+                        سوق ا هذا
+                      </div>
+                      <div
+                        class="audio-aside__field--translate audio-aside__field--item active"
+                      >
+                        Це війна! Війна Росії проти України
+                      </div>
+                    </div>
+                    <div class="audio-exercise-slider__item">
+                      <div class="audio-exercise__num fw-semibold">
+                        Вправа
+                        <span>1</span>
+                      </div>
+                      <div class="audio-exercies__info fw-bold">
+                        Повторіть скоромовку за диктором
+                      </div>
+
+                      <div
+                        class="audio-expirience__listen d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-listen__left d-flex align-items-center gap-3"
+                        >
+                          <div
+                            class="audio-expirience-listen-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/start.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/start.png"
+                                width="11"
+                                alt="arrow"
+                            /></picture>
+                            <div class="line"></div>
+                          </div>
+                          <div
+                            class="audio-expirience-listen-left__info aelli d-flex align-items-center gap-2"
+                          >
+                            <div class="aelli__time fw-semibold">0:40</div>
+                            <div class="aelli__line"></div>
+                            <div class="aelli__all-time fw-bold">1:43</div>
+                          </div>
+                        </div>
+                        <div
+                          class="audio-expirience-listen__right d-flex gap-2"
+                        >
+                          <div
+                            class="audio-expirience-liste-right__box d-flex gap-2"
+                          >
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-1 fw-bold active"
+                            >
+                              1x
+                            </div>
+                            <div
+                              class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-speed-2 fw-bold"
+                            >
+                              1.5x
+                            </div>
+                          </div>
+
+                          <div
+                            class="audio-expirience-listen-right__item justify-content-center align-items-center d-flex aelri-sybmol"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/sybmol.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/sybmol.png"
+                                width="23"
+                                alt="symbol"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="audio-expirience__voice d-flex align-items-center justify-content-between"
+                      >
+                        <div
+                          class="audio-expirience-voice__left d-flex align-items-center"
+                        >
+                          <div
+                            class="audio-expirience-voice-left__start d-flex justify-content-center align-items-center"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/microphone.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/microphone.png"
+                                width="24"
+                                alt="arrow"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-left__info aelli d-flex align-items-center"
+                          >
+                            <div class="aelli__record-line">
+                              <picture
+                                ><source
+                                  srcset="img/audio/record-line.webp"
+                                  type="image/webp" />
+                                <img
+                                  src="img/audio/record-line.png"
+                                  alt="arrow"
+                              /></picture>
+                            </div>
+                            <div class="aelli__all-time fw-bold">1:40</div>
+                          </div>
+                        </div>
+                        <div class="audio-expirience-voice__right d-flex">
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-delete"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/trash.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/trash.svg"
+                                width="23"
+                                alt="trash"
+                            /></picture>
+                          </div>
+                          <div
+                            class="audio-expirience-voice-right__item justify-content-center align-items-center d-flex aelri-download"
+                          >
+                            <picture
+                              ><source
+                                srcset="img/audio/download.webp"
+                                type="image/webp" />
+                              <img
+                                src="img/audio/download.svg"
+                                width="24"
+                                alt="download"
+                            /></picture>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="audio-text__field text-end">
+                        إنها الحرب! حرب روسيا ضد أوكرانيا. إنها ليست أزمة، ولا
+                        نزاعًا، كما يتمّ تعريفُها أحيانًا. إنها حرب عدوانية
+                        وحشية. لقد أتت القوات الروسية إلى أرضنا وتريد غزو شعبنا.
+                        ولوْلا الحربُ الروسية ضد أوكرانيا، لَما كان هناك نقص في
+                        سوق ا هذا
+                      </div>
+                      <div
+                        class="audio-aside__field--translate audio-aside__field--item active"
+                      >
+                        Це війна! Війна Росії проти України
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="audio-expirience__pages">
+                    <div class="audio-expirience-pages__list fw-bold d-flex">
+                      <div class="audio-expirience-pages-list">1/</div>
+                      <div class="audio-expirience-pages-list-all">2</div>
+                    </div>
+                    <div class="audio-expirience-pages__nav d-flex">
+                      <div
+                        class="audio-expirience-pages-nav__item active"
+                      ></div>
+                      <div class="audio-expirience-pages-nav__item"></div>
+                    </div>
+                    <div class="audio-expirience-pages__btns d-flex">
+                      <div
+                        class="audio-expirience-pages-btn-back d-flex align-items-center justify-content-center fw-bold"
+                      >
+                        <span>Назад</span>
+                      </div>
+                      <div
+                        class="audio-expirience-pages-btn__next d-flex align-items-center justify-content-center fw-bold"
+                      >
+							 <span>Далі</span>
+							 <div class="audio-expirience-pages-btn__next__img">
+								<picture
+                          ><source
+                            srcset="img/audio/next-icon.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/next-icon.png"
+                            width="6"
+                            alt="download"
+                        /></picture>
+								<picture
+                          ><source
+                            srcset="img/audio/next-icon-blue.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/next-icon-blue.svg"
+                            width="10"
+                            alt="download"
+                        /></picture>
+
+							 </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="audio__aside col-xxl-5 col-xl-4 col-lg-5 col-12">
+                <div class="audio__aside__back"></div>
+                <div class="audio-aside__box d-flex gap-3 align-items-end">
+                  <div
+                    class="audio-aside__item d-flex fw-semibold align-items-end gap-2 active"
+                  >
+                    Переклад
+                    <picture
+                      ><source
+                        srcset="img/audio/translate.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/audio/translate.svg"
+                        width="20"
+                        alt="arrow"
+                    /></picture>
+                  </div>
+                  <div class="audio-aside__item fw-semibold">
+                    Словник (<span>9</span>)
+                  </div>
+                </div>
+                <div class="audio-aside__content">
+                  <div
+                    class="audio-aside__field--translate audio-aside__field--item active"
+                  >
+                    Це війна! Війна Росії проти України
+                  </div>
+                  <div
+                    class="audio-aside__field--dictionary audio-aside__field--item"
+                  >
+                    <div class="audio-aside__field--dictionary-close">
+                      <picture
+                        ><source
+                          srcset="img/audio/close.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/audio/close.png"
+                          width="13"
+                          alt="close"
+                      /></picture>
+                    </div>
+                    <div
+                      class="audio-aside-field-dictionary__title fw-bold ff-sec"
+                    >
+                      МІЙ СЛОВНИК
+                    </div>
+                    <div
+                      class="audio-aside-field-dictionary__words d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="audio-aside-field-dictionary-words__add fw-bold"
+                      >
+                        Додано 9 слів
+                      </div>
+                      <div
+                        class="audio-aside-field-dictionary-words__clean-all fw-semibold"
+                      >
+                        Очистити все
+                      </div>
+                    </div>
+
+                    <div
+                      class="audio-aside-field-dictionary__add d-flex align-items-center justify-content-center"
+                    >
+                      <input type="text" />
+                      <div class="audio-aside-field-dictionary__btn" tooltip="Додайте слово і натисніть Enter">
+                        <picture
+                          ><source
+                            srcset="img/audio/plus.webp"
+                            type="image/webp" />
+                          <img
+                            src="img/audio/plus.png"
+                            width="12"
+                            alt="arrow"
+                        /></picture>
+                      </div>
+							 <div class="audio-aside-field-dictionary__added d-flex align-items-center">
+								<div class="audio-aside-field-dictionary-added__img">
+									<picture
+									><source
+									  srcset="img/"
+									  type="img/main-lessons/green-mark.webp" />
+									<img src="img/main-lessons/green-mark.svg" width="20" alt="arrow"
+								 /></picture>
+								</div>
+								<div class="audio-aside-field-dictionary-added__text">Слово додане</div>
+							  </div>
+                    </div>
+
+						  <div class="audio-aside-field-dictionary__list">
+							<div
+							class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+						 >
+						 <div class="aafdli__box d-flex justify-content-between">
+							  <div class="aafdli__left">
+								  <div class="aafdli-left__icon aafdli-left__icon-see">
+									  <picture
+							  ><source
+								 srcset="img/main-overview/eye.webp"
+								 type="image/webp" />
+							  <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+							/></picture>
+								  </div>
+								  <div class="aafdli-left__icon aafdli-left__icon--unsee">
+									  <picture
+							  ><source
+								 srcset="img/main-overview/eye-gray.webp"
+								 type="image/webp" />
+							  <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+							/></picture>
+								  </div>
+							  </div>
+								 <div class="aafdli__right">
+								  <div
+							  class="audio-aside-field-dictionary-list__item--text"
+							>
+							  لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+							</div>
+							<div
+							  class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+							>
+							Сучасний світ
+							</div>
+						  </div>
+						 </div>
+						 <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+						 </div>
+						 <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+							 Надзвичайний
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+						  <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+                        Молодий
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+						  <div
+                      class="audio-aside-field-dictionary-list__item text-end gap-2 aafdli"
+                    >
+						  <div class="aafdli__box d-flex justify-content-between">
+								<div class="aafdli__left">
+									<div class="aafdli-left__icon aafdli-left__icon-see">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+									<div class="aafdli-left__icon aafdli-left__icon--unsee">
+										<picture
+                        ><source
+                          srcset="img/main-overview/eye-gray.webp"
+                          type="image/webp" />
+                        <img src="img/main-overview/eye-gray.svg" width="20" alt="arrow"
+                      /></picture>
+									</div>
+								</div>
+						  		<div class="aafdli__right">
+									<div
+                        class="audio-aside-field-dictionary-list__item--text"
+                      >
+                        لَقَدْ أَتَتِ القُوَّاتُ الرُّوسِيَّةُ إِ
+                      </div>
+							 <div
+                        class="audio-aside-field-dictionary-list__item--translate fw-semibold"
+                      >
+							 Якісний
+                      </div>
+							</div>
+						  </div>
+						  <div class="aafdli__delete fw-semibold">Видалити слово</div>
+
+                    </div>
+
+                  </div>
+
+                    <div
+                      class="audio-aside-field-dictionary__see-all text-center fw-semibold"
+                    >
+						  <span> Розгорнути словник</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container w-100">
+        <div
+          class="d-none position-relative bg-clr-2 d-lg-block footer-body rounded-bottom-4"
+        >
+          <a
+            href="#home"
+            class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn"
+          >
+            <div
+              class="d-flex align-items-center flex-column to-top-btn__inner"
+            >
+              <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+              <picture
+                ><source
+                  srcset="img/icons/arrow-to-top.webp"
+                  type="image/webp" />
+                <img src="img/icons/arrow-to-top.png" width="14" alt="arrow"
+              /></picture>
+            </div>
+          </a>
+          <div class="d-flex justify-content-between footer-top">
+            <div class="col-xxl-7 col-6">
+              <div class="d-flex">
+                <ul
+                  class="align-items-center gap-3 col-5 socials d-none d-xl-flex"
+                >
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/inst-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/inst-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Instagram</span>
+                    </a>
+                  </li>
+                  <li>
+                    <span class="d-block socials-divider"></span>
+                  </li>
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/tg-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/tg-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="me-5 col-5">
+                  <div
+                    class="custom-lang custom-lang--white"
+                    style="width: fit-content"
+                  >
+                    <div class="custom-lang-selected">
+                      <picture
+                        ><source
+                          srcset="img/flags/no-round-ua-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/no-round-ua-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text">Українська</span>
+                      <div>
+                        <svg
+                          class="custom-lang-arrow"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill=""
+                        >
+                          <circle opacity="1" cx="10" cy="10" r="10" fill="" />
+                          <path
+                            d="M14 9L10 13L6 9"
+                            stroke=""
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="custom-lang-hidden">
+                      <ul class="custom-lang-list">
+                        <li class="custom-lang-item">
+                          <picture
+                            ><source
+                              srcset="img/flags/ae-flag.webp"
+                              type="image/webp" />
+                            <img
+                              class="custom-lang-flag"
+                              src="img/flags/ae-flag.png"
+                              alt="flag-icon"
+                          /></picture>
+                          <span
+                            class="custom-lang-text custom-lang-text--hidden"
+                            >Арабська</span
+                          >
+                        </li>
+                        <li class="custom-lang-item">
+                          <picture
+                            ><source
+                              srcset="img/flags/eng-flag.webp"
+                              type="image/webp" />
+                            <img
+                              class="custom-lang-flag"
+                              src="img/flags/eng-flag.png"
+                              alt="flag-icon"
+                          /></picture>
+                          <span
+                            class="custom-lang-text custom-lang-text--hidden"
+                            >Англійська</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-logo-block">
+                <picture
+                  ><source
+                    srcset="img/footer/logo-min.webp"
+                    type="image/webp" />
+                  <img
+                    class="footer-logo mb-4"
+                    src="img/footer/logo-min.png"
+                    alt="footer-logo"
+                /></picture>
+                <div
+                  class="fw-bold ff-sec d-none d-xxl-block display-4 text-white uppercase"
+                  style="letter-spacing: -0.07rem"
+                >
+                  ДИПЛОМАТІЯ ВІЙНИ
+                </div>
+              </div>
+            </div>
+            <div
+              class="d-flex justify-content-between align-items-start col-6 col-xl-4"
+            >
+              <ul class="d-flex flex-column gap-4 footer-nav">
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Всі уроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Аудіоуроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Оглядовий урок
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Особистий кабінет
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Блог </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Рецензії </a>
+                </li>
+              </ul>
+              <div
+                class="d-flex flex-column justify-content-between align-items-start col-5 flex-xl-row h-100"
+              >
+                <a
+                  href="mailto:mail@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-mail-link"
+                >
+                  <picture
+                    ><source
+                      srcset="img/icons/email-icon.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/icons/email-icon.png"
+                      width="20"
+                      height="20"
+                      alt="email-link"
+                  /></picture>
+                  <span class="fw-bold text-white lh-1">Напишіть нам</span>
+                </a>
+                <ul
+                  class="d-flex align-items-center flex-column col-5 d-xl-none gap-3 socials"
+                >
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/inst-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/inst-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Instagram</span>
+                    </a>
+                  </li>
+                  <li class="w-auto">
+                    <a
+                      class="d-flex align-items-center gap-2 socials-link"
+                      href="#"
+                      target="_blank"
+                      aria-label="Link to social media"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/socials/tg-icon.webp"
+                          type="image/webp" />
+                        <img
+                          src="img/socials/tg-icon.png"
+                          alt="social-media-icon"
+                      /></picture>
+                      <span class="socials-text">Telegram</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center footer-bottom justify-content-between"
+          >
+            <div class="row col-6 col-xl-7">
+              <div class="d-none col-5 d-xl-block footer-rights p-0">
+                Посібник арабської мови. 2023
+              </div>
+              <div class="p-0 footer-rights col-4">© Всі права захищені</div>
+            </div>
+            <div class="align-items-center col-6 col-xl-4 row">
+              <a
+                href="#"
+                aria-label="Link to
+            contract offer"
+                class="p-0 footer-rights footer-bottom-link col-6"
+              >
+                Договір оферти
+              </a>
+              <ul class="d-flex col p-0" style="grid-gap: 2rem">
+                <li>
+                  <picture
+                    ><source
+                      srcset="img/footer/visa--white.webp"
+                      type="image/webp" />
+                    <img src="img/footer/visa--white.png" alt="visa-icon"
+                  /></picture>
+                </li>
+                <li>
+                  <picture
+                    ><source
+                      srcset="img/footer/master-card--white.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/footer/master-card--white.png"
+                      alt="mastercard-icon"
+                  /></picture>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="d-block bg-clr-2 d-lg-none footer-body position-relative rounded-bottom-4"
+        >
+          <a
+            href="#home"
+            class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn"
+          >
+            <div
+              class="d-flex align-items-center flex-column to-top-btn__inner"
+            >
+              <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+              <picture
+                ><source
+                  srcset="img/icons/arrow-to-top.webp"
+                  type="image/webp" />
+                <img src="img/icons/arrow-to-top.png" width="14" alt="arrow"
+              /></picture>
+            </div>
+          </a>
+          <div class="d-flex flex-column justify-content-between footer-top">
+            <div
+              class="d-flex justify-content-between align-items-start col-12"
+            >
+              <ul class="d-flex flex-column gap-4 footer-nav">
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Всі уроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Аудіоуроки
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Оглядовий урок
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link">
+                    Особистий кабінет
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Блог </a>
+                </li>
+                <li>
+                  <a href="#" class="fw-semibold footer-nav-link"> Рецензії </a>
+                </li>
+              </ul>
+              <div
+                class="custom-lang custom-lang--white"
+                style="width: fit-content"
+              >
+                <div class="custom-lang-selected">
+                  <picture
+                    ><source
+                      srcset="img/flags/no-round-ua-flag.webp"
+                      type="image/webp" />
+                    <img
+                      class="custom-lang-flag"
+                      src="img/flags/no-round-ua-flag.png"
+                      alt="flag-icon"
+                  /></picture>
+                  <span class="custom-lang-text">Українська</span>
+                  <div>
+                    <svg
+                      class="custom-lang-arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill=""
+                    >
+                      <circle opacity="1" cx="10" cy="10" r="10" fill="" />
+                      <path
+                        d="M14 9L10 13L6 9"
+                        stroke=""
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="custom-lang-hidden">
+                  <ul class="custom-lang-list">
+                    <li class="custom-lang-item">
+                      <picture
+                        ><source
+                          srcset="img/flags/ae-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/ae-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden"
+                        >Арабська</span
+                      >
+                    </li>
+                    <li class="custom-lang-item">
+                      <picture
+                        ><source
+                          srcset="img/flags/eng-flag.webp"
+                          type="image/webp" />
+                        <img
+                          class="custom-lang-flag"
+                          src="img/flags/eng-flag.png"
+                          alt="flag-icon"
+                      /></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden"
+                        >Англійська</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex" style="margin-top: 4.5rem">
+              <ul class="d-flex align-items-center col-12 gap-4 socials">
+                <li class="w-auto">
+                  <a
+                    class="d-flex align-items-center gap-2 socials-link"
+                    href="#"
+                    target="_blank"
+                    aria-label="Link to social media"
+                  >
+                    <picture
+                      ><source
+                        srcset="img/socials/inst-icon.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/socials/inst-icon.png"
+                        alt="social-media-icon"
+                    /></picture>
+                    <span class="socials-text">Instagram</span>
+                  </a>
+                </li>
+
+                <li class="w-auto">
+                  <a
+                    class="d-flex align-items-center gap-2 socials-link"
+                    href="#"
+                    target="_blank"
+                    aria-label="Link to social media"
+                  >
+                    <picture
+                      ><source
+                        srcset="img/socials/tg-icon.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/socials/tg-icon.png"
+                        alt="social-media-icon"
+                    /></picture>
+                    <span class="socials-text">Telegram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex align-items-center col-12 gap-3 mt-5">
+              <div>
+                <picture
+                  ><source
+                    srcset="img/footer/logo-min.webp"
+                    type="image/webp" />
+                  <img
+                    width="55"
+                    src="img/footer/logo-min.png"
+                    alt="footer-logo"
+                /></picture>
+              </div>
+              <div
+                class="d-flex flex-column justify-content-between h-100 flex-xl-row col"
+              >
+                <a
+                  href="mailto:mail@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-mail-link"
+                >
+                  <picture
+                    ><source
+                      srcset="img/icons/email-icon.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/icons/email-icon.png"
+                      width="20"
+                      height="20"
+                      alt="email-link"
+                  /></picture>
+                  <span class="fw-bold text-white lh-1">Напишіть нам</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex align-items-center flex-column footer-bottom justify-content-between"
+          >
+            <ul class="d-flex col-12 mb-4 p-0" style="grid-gap: 2rem">
+              <li>
+                <picture
+                  ><source
+                    srcset="img/footer/visa--white.webp"
+                    type="image/webp" />
+                  <img
+                    width="52"
+                    src="img/footer/visa--white.png"
+                    alt="visa-icon"
+                /></picture>
+              </li>
+              <li>
+                <picture
+                  ><source
+                    srcset="img/footer/master-card--white.webp"
+                    type="image/webp" />
+                  <img
+                    width="102"
+                    src="img/footer/master-card--white.png"
+                    alt="mastercard-icon"
+                /></picture>
+              </li>
+            </ul>
+            <div class="d-flex gap-4 col-12">
+              <div class="p-0 footer-rights" style="font-size: 0.75rem">
+                © Всі права захищені
+              </div>
+              <a
+                href="#"
+                style="font-size: 0.75rem"
+                aria-label="Link to
+          contract offer"
+                class="p-0 footer-rights footer-bottom-link"
+              >
+                Договір оферти
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js?_v=20230822181325" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js?_v=20230822181325" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

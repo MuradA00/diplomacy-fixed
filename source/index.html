@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="uk-UA">
+@include('partials/head.html')
+<body>
+  <header class="header">
+  <div class="container">
+    <div class="d-flex align-items-center flex-wrap header-body justify-content-lg-between">
+      <a href="/" class="col-lg-4 col-6 header-logo">
+        <picture><source srcset="img/header/header-logo.webp" type="image/webp"><img src="img/header/header-logo.png" alt="logo"></picture>
+      </a>
+      <nav class="col-12 col-lg-6 col-xl-4 justify-content-center justify-content-lg-end justify-content-xl-start nav">
+        <ul class="d-flex align-items-center nav-list">
+          <li>
+            <a class="fw-bold text-clr-1 nav-link p-2" href="#">Уроки</a>
+          </li>
+          <li>
+            <a class="fw-bold text-clr-1 nav-link p-2" href="#">Подкасти</a>
+          </li>
+          <li>
+            <a class="fw-bold text-clr-1 nav-link p-2" href="#">Блог</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="d-flex align-items-center col col-lg-5 header-second-row justify-content-end">
+        <div class="custom-lang custom-lang--header me-5">
+          <div class="custom-lang-selected">
+            <picture><source srcset="img/flags/no-round-ua-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/no-round-ua-flag.png" alt="flag-icon"></picture>
+            <span class="custom-lang-text">Українська</span>
+            <div>
+              <svg class="custom-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="">
+                <circle opacity="0.2" cx="10" cy="10" r="10" fill=""/>
+                <path d="M14 9L10 13L6 9" stroke="" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+          </div>
+          <div class="custom-lang-hidden">
+            <ul class="custom-lang-list">
+              <li class="custom-lang-item">
+                <picture><source srcset="img/flags/ae-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/ae-flag.png" alt="flag-icon"></picture>
+                <span class="custom-lang-text custom-lang-text--hidden">Арабська</span>
+              </li>
+              <li class="custom-lang-item">
+                <picture><source srcset="img/flags/eng-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/eng-flag.png" alt="flag-icon"></picture>
+                <span class="custom-lang-text custom-lang-text--hidden">Англійська</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button aria-label="Button to login" class="button-primary button-primary--filled button-primary--md gap-2 log-in-btn ms-auto ms-lg-0 py-3">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M12.5005 18.9583H7.50052C6.40052 18.9583 5.48386 18.8499 4.70886 18.6166C4.42553 18.5333 4.24219 18.2583 4.25886 17.9666C4.46719 15.4749 6.9922 13.5166 10.0005 13.5166C13.0088 13.5166 15.5255 15.4666 15.7422 17.9666C15.7672 18.2666 15.5838 18.5333 15.2922 18.6166C14.5172 18.8499 13.6005 18.9583 12.5005 18.9583ZM5.60053 17.5499C6.15053 17.6583 6.77552 17.7083 7.50052 17.7083H12.5005C13.2255 17.7083 13.8505 17.6583 14.4005 17.5499C13.9588 15.9499 12.1338 14.7666 10.0005 14.7666C7.8672 14.7666 6.0422 15.9499 5.60053 17.5499Z" fill=""/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.57824 2.57922C3.6903 1.46716 5.35437 1.04199 7.49935 1.04199H12.4993C14.6443 1.04199 16.3084 1.46716 17.4204 2.57922C18.5325 3.69128 18.9577 5.35535 18.9577 7.50033V12.5003C18.9577 14.1258 18.7148 15.4704 18.1161 16.511C17.5026 17.5772 16.5531 18.2597 15.2863 18.6183C15.1067 18.6692 14.9138 18.6372 14.7604 18.531C14.6069 18.4248 14.5089 18.2556 14.4933 18.0697C14.3457 16.3261 12.4935 14.767 9.99943 14.767C7.50546 14.767 5.653 16.3261 5.50546 18.0697C5.48972 18.2556 5.39174 18.4248 5.23829 18.531C5.08484 18.6372 4.89198 18.6692 4.71244 18.6183C3.44562 18.2597 2.49612 17.5772 1.88262 16.511C1.28392 15.4704 1.04102 14.1258 1.04102 12.5003V7.50033C1.04102 5.35535 1.46618 3.69128 2.57824 2.57922ZM3.46212 3.4631C2.69918 4.22604 2.29102 5.47863 2.29102 7.50033V12.5003C2.29102 14.0248 2.52312 15.1177 2.96607 15.8876C3.2937 16.457 3.75638 16.8839 4.40357 17.1799C5.02392 15.0077 7.38136 13.517 9.99943 13.517C12.6176 13.517 14.9748 15.0077 15.5951 17.1799C16.2423 16.8839 16.705 16.457 17.0326 15.8876C17.4756 15.1177 17.7077 14.0248 17.7077 12.5003V7.50033C17.7077 5.47863 17.2995 4.22604 16.5366 3.4631C15.7736 2.70016 14.521 2.29199 12.4993 2.29199H7.49935C5.47766 2.29199 4.22507 2.70016 3.46212 3.4631ZM9.99935 6.45866C8.69452 6.45866 7.64102 7.51218 7.64102 8.81699C7.64102 10.1241 8.69677 11.1837 9.99935 11.1837C11.3019 11.1837 12.3577 10.1241 12.3577 8.81699C12.3577 7.51218 11.3042 6.45866 9.99935 6.45866ZM6.39102 8.81699C6.39102 6.82183 8.00417 5.20866 9.99935 5.20866C11.9945 5.20866 13.6077 6.82183 13.6077 8.81699C13.6077 10.8099 11.9968 12.4337 9.99935 12.4337C8.00191 12.4337 6.39102 10.8099 6.39102 8.81699Z" fill=""/>
+              <path d="M9.99896 12.434C8.00729 12.434 6.39062 10.809 6.39062 8.81732C6.39062 6.82567 8.00729 5.20898 9.99896 5.20898C11.9906 5.20898 13.6073 6.82567 13.6073 8.81732C13.6073 10.809 11.9906 12.434 9.99896 12.434ZM9.99896 6.45898C8.69896 6.45898 7.64063 7.51733 7.64063 8.81732C7.64063 10.1257 8.69896 11.184 9.99896 11.184C11.299 11.184 12.3573 10.1257 12.3573 8.81732C12.3573 7.51733 11.299 6.45898 9.99896 6.45898Z" fill=""/>
+            </svg>
+          </span>
+          <span class="fw-bold text-clr-1 lh-1 log-in-btn__text">
+            Особистий кабінет
+          </span>
+        </button>
+        <div class="d-none is-logged">
+          <div class="is-logged__inner">
+            <div class="is-logged__icon">
+              <span class="fw-bold text-clr-1 ff-sec">О</span>
+            </div>
+            <div class="is-logged__hey">
+              <span class="fw-semibold d-block">Раді бачити, </span>
+              <span class="fw-bold d-block">Оксано</span>
+            </div>
+          </div>
+          <button aria-label="Button to log-out" class="d-flex align-items-center justify-content-center d-none is-logged__btn">
+            <picture><source srcset="img/header/log-out-icon.webp" type="image/webp"><img src="img/header/log-out-icon.png" width="16px" height="17px" alt="log-out-icon"></picture>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section id="home" class="rounded-4 home mb-0 overflow-hidden" style="background-image: linear-gradient(146deg, #FFE8D7 0%, #EEE6DB 100%);">
+  <div class="h-100 container position-relative">
+    <div>
+      <div class="home-image position-absolute">
+        <picture><source srcset="img/home/home-image.webp" type="image/webp"><img src="img/home/home-image.png" alt="home-image"></picture>
+      </div>
+      <div class="d-flex flex-column justify-content-between h-100 home-body">
+        <div class="align-items-center flex-column bg-white d-xl-flex home-offer justify-content-center mt-2 position-relative rounded-bottom-4">
+          <div>
+            <h1 class="home-title display-4 mb-2 md-sm-3" style="letter-spacing: -0.07rem;">
+              АРАБСЬКА МОВА <br>
+              ДЛЯ ПРОФЕСІОНАЛІВ
+            </h1>
+            <p class="fw-semibold">
+              Інтерактивний онлайн-посібник - Ваш провідник в арабський діловий світ
+            </p>
+          </div>
+          <div class="bg-white position-absolute home-btn-wrapper rounded-4" style="width: max-content;">
+            <a href="#" class="button-primary button-primary--filled button-primary--effect home-button">
+              <span>Спробувати безоплатно</span>
+            </a>
+          </div>
+        </div>
+        <div class="d-none flex-column align-items-end d-md-flex home-content justify-content-end position-relative">
+          <h2 class="fw-bold text-clr-1 mb-3 mb-md-4" style="line-height: 160%;" dir="rtl">
+            ما أُخِذَ بالقوة لا يُسْتَرَدُّ <br> إلّا بالقوّة
+          </h2>
+          <p class="fw-semibold">Силою не дають – силою відбирають.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="lessons position-relative z-1">
+  <div class="container">
+    <div class="col-12 col-xl-9 ms-xl-auto me-0">
+      <div class="">
+        <div class="d-flex col-12 lessons-swiper ms-xl-auto swiper">
+          <div class="d-flex col-12 col-lg-6 lessons-row mb-3 mb-lg-0 swiper-wrapper">
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/girl-image.webp" type="image/webp"><img src="img/lessons/girl-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                  <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                    30 інтерактивних уроків арабської
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    30 онлайн уроків, автономний <br>
+                    режим навчання
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/boy-image.webp" type="image/webp"><img src="img/lessons/boy-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                    суспільно-політична, дипломатична лексика
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    Вчимо розуміти на <br>
+                    коментувати
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/girl-image.webp" type="image/webp"><img src="img/lessons/girl-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                    перевірка <br> вправ в 1 клік
+
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    Подкасти арабською з перекладом
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/boy-image.webp" type="image/webp"><img src="img/lessons/boy-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                  <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                    подкасти арабською <br> з перекладом
+
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    Арабська мудрість у кожному уроці
+
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/girl-image.webp" type="image/webp"><img src="img/lessons/girl-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                  тренування на арабських медіаджерелах
+
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    Подкасти арабською з перекладом
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+            <div class="bg-white lessons-inner rounded-3 swiper-slide">
+              <div class="lessons-image__container">
+                <picture><source srcset="img/lessons/boy-image.webp" type="image/webp"><img src="img/lessons/boy-image.png" alt="girl-image"></picture>
+              </div>
+              <div class="lessons-content">
+                <div class="lessons-content-top">
+                <div class="fw-bold ff-sec fs-4 lessons-head mb-4 text-clr-2" style="line-height: 130%;">
+                арабська мудрість у кожному уроці
+
+                  </div>
+                  <p class="fw-semibold lessons-info-text lh-sm">
+                    Арабська мудрість у кожному уроці
+
+                  </p>
+                </div>
+                <a href="#" class="button-primary button-primary--filled button-primary--md">
+                  <span>Детальніше</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="faq">
+  <div class="container">
+    <ul class="d-flex flex-column gap-4">
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            01
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">ОПАНУЙТЕ ЛЕКСИКУ <br>
+              АРАБСЬКИХ ЗМІ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-1.webp" type="image/webp"><img src="img/faq/faq-image-1.png" alt="faq-image"></picture>
+        </div>
+      </li>
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            02
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">НАВЧІТЬСЯ РОЗУМІТИ <br>
+              ПОДКАСТИ АРАБСЬКОЮ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-2.webp" type="image/webp"><img src="img/faq/faq-image-2.png" alt="faq-image"></picture>
+        </div>
+      </li>
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            03
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">ЗАГОВОРІТЬ АРАБСЬКОЮ, <br>
+              ЯК ДИПЛОМАТ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-3.webp" type="image/webp"><img src="img/faq/faq-image-3.png" alt="faq-image"></picture>
+        </div>
+      </li>
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            04
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">ПОЧНІТЬ ГОТУВАТИ <br>
+              ІНТЕРВ’Ю АРАБСЬКОЮ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-4.webp" type="image/webp"><img src="img/faq/faq-image-4.png" alt="faq-image"></picture>
+        </div>
+      </li>
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            05
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">ПЕРЕЙМІТЬ ВИМОВУ <br>
+              НОСІЯ АРАБСЬКОЇ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-5.webp" type="image/webp"><img src="img/faq/faq-image-5.png" alt="faq-image"></picture>
+        </div>
+      </li>
+      <li class="faq-row">
+        <div class="d-flex flex-column justify-content-between align-items-start flex-md-row gap-3 gap-md-0">
+          <div class="ff-sec text-clr-2 fs-5">
+            06
+          </div>
+          <div class="d-flex col col-xl-9 d-xl-block faq-header ff-sec justify-content-sm-end ms-xl-auto pb-3 w-100">
+            <span class="col col-md-6 col-xl-12 d-xl-flex justify-content-xl-start">ВИВЧІТЬ ЛЕГКО 500+ <br>
+              АРАБСЬКИХ СЛІВ ТА ФРАЗ</span>
+          </div>
+        </div>
+        <div class="col col-xl-9 ms-xl-auto faq-image-container">
+          <picture><source srcset="img/faq/faq-image-6.webp" type="image/webp"><img src="img/faq/faq-image-6.png" alt="faq-image"></picture>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="promo">
+  <div class="container">
+    <h2 class="mb-sm-5 mb-3">
+      <span class="d-block col-xl-9 ms-xl-auto"> досвід дипломатів та викладачів</span>
+      арабської мови в одному ресурсі
+    </h2>
+    <div class="col-12 col-xl-9 ms-xl-auto">
+      <div class="col col-lg-6 mb-3 mb-sm-4 ms-lg-auto ms-xl-0">
+        <p class="text-clr-1">
+          Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies suscipit lacus in in consequat. Id sit non habitasse duis rhoncus sit a integer. Mauris tempus facilisi egestas sollicitudin in vulputate aenean euismod hendrerit. Nulla nibh urna quam sollicitudin blandit. Vitae donec eget Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies suscipit lacus in in consequat. Id sit non habitasse duis rhoncus sit a integer. Mauris tempus facilisi egestas sollicitudin in vulputate aenean euismod hendrerit. Nulla nibh urna quam sollicitudin blandit. Vitae donec eget
+        </p>
+      </div>
+      <div class="row align-items-end flex-column flex-sm-row">
+        <div class="col col-xl-6 mb-4 mb-sm-0">
+          <p class="mb-5">
+            Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies
+          </p>
+          <div>
+            <picture><source srcset="img/promo/promo-image.webp" type="image/webp"><img src="img/promo/promo-image.png" class="d-block" alt="promo-image"></picture>
+          </div>
+        </div>
+        <div class="col col-xl-6">
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="map">
+  <div class="container">
+    <h3 class="ff-sec col-xl-9 col-12 mb-5 ms-auto" style="letter-spacing: -.8px;">ПЕРШИЙ В <span><picture><source srcset="img/flags/no-round-ua-flag.webp" type="image/webp"><img class="no-round-flag" src="img/flags/no-round-ua-flag.png" alt="ua-flag"></picture> </span>  УКРАЇНІ ОНЛАЙН-ПОСІБНИК АРАБСЬКОЇ <br class="info-divider"> дипломатичної  МОВИ
+    </h3>
+    <div class="mb-5">
+      <picture>
+        <img class="h-100 d-block map-banner w-100" src="img/map/map-image.png" alt="map-image">
+      </picture>
+    </div>
+    <div class="col-xl-9 ms-xl-auto">
+      <div class="col-md-6 mb-4 mb-sm-5">
+        <p class="text-clr-1" style="line-height: 160%">
+          Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies
+        </p>
+      </div>
+      <div class="col-12 ms-auto col-md-6 col-xl-5">
+        <p class="text-clr-1" style="line-height: 160%">
+          Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies suscipit lacus in in consequat. Id sit non habitasse duis rhoncus sit a integer. Mauris tempus facilisi egestas sollicitudin in vulputate aenean euismod hendrerit. Nulla nibh urna quam sollicitudin blandit. Vitae donec eget Lorem ipsum dolor sit amet consectetur. Purus dui diam tellus in eros. Lectus vel consequat diam dignissim nulla. Lacus etiam et aliquam adipiscing tincidunt quis nunc odio. Massa ultricies suscipit lacus in in consequat. Id sit non habitasse duis rhoncus sit a integer. Mauris tempus facilisi egestas sollicitudin in vulputate aenean euismod hendrerit. Nulla nibh urna quam sollicitudin blandit. Vitae donec eget
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="info">
+  <div class="container">
+    <div class="tab">
+      <div class="d-flex flex-nowrap tab-toggles">
+        <div data-tab="tab1" class="fw-bold text-clr-1 ff-sec tab-toggle text-uppercase tab-toggle--active">
+          ЩО ЧЕКАЄ НА ВАС
+        </div>
+        <div data-tab="tab2" class="fw-bold text-clr-1 ff-sec tab-toggle text-uppercase">
+          КОМУ ПІДІЙДЕ
+        </div>
+        <div data-tab="tab3" class="fw-bold text-clr-1 ff-sec tab-toggle text-uppercase">
+          ЧОМУ ВАРТО СПРОБУВАТИ
+        </div>
+        <div data-tab="tab4" class="fw-bold text-clr-1 ff-sec tab-toggle text-uppercase">
+          ХТО ЗАСНОВНИК
+        </div>
+      </div>
+      <div>
+        <div class="d-flex p-2 tab-container">
+          <div class="col-md-8 position-relative tab-inner z-1">
+            <div id="tab1" class="d-flex bg-white align-items-end tab-content z-1">
+              <div class="align-items-center flex-column col-4 d-none d-xxl-flex gap-4 mb-3">
+                <div class="tab-content-logo">
+                  <picture><source srcset="img/info/info-tab-logo.webp" type="image/webp"><img src="img/info/info-tab-logo.png" alt=""></picture>
+                </div>
+                <div class="d-flex align-items-center flex-column text-center">
+                  <span class="ff-sec text-clr-2 text-uppercase" style="font-size: 19px;letter-spacing: -0.0475rem;">Дипломатія війни</span>
+                  <span class="fs-5" style="color: #AFAFAF;">Посібник арабської мови</span>
+                </div>
+              </div>
+              <div class="d-flex flex-column h-100 gap-4">
+                <p class="tab-content-text">
+                  30 онлайн-уроків (основні та оглядові), що мають уніфіковану будову. Ключовим елементом кожного уроку є текст арабською мовою за мотивами заяв МЗС України після 24.02.2022 року з опорним лексичним матеріалом. Усі тексти озвучені професійним диктором та доступні для прочитання з оголосами й без них.
+                </p>
+                <p class="tab-content-text">
+                  Для тренування лексичних, граматичних, перекладацьких та інших навичок у кожному основному уроці пропонується комплекс з 15 інтерактивних вправ, включно з самостійною роботою. Оглядові уроки містять вправи на повторення матеріалу попередніх 4 уроків, кросворд та творче завдання.
+                </p>
+              </div>
+            </div>
+            <div id="tab2" class="d-flex bg-white align-items-end tab-content z-1">
+              <div class="align-items-center flex-column col-4 d-none d-xxl-flex gap-4 mb-3">
+                <div class="tab-content-logo">
+                  <picture><source srcset="img/info/info-tab-logo.webp" type="image/webp"><img src="img/info/info-tab-logo.png" alt=""></picture>
+                </div>
+                <div class="d-flex align-items-center flex-column text-center">
+                  <span class="ff-sec text-clr-2 text-uppercase" style="font-size: 19px;letter-spacing: -0.0475rem;">Дипломатія війни</span>
+                  <span class="fs-5" style="color: #AFAFAF;">Посібник арабської мови</span>
+                </div>
+              </div>
+              <div class="d-flex flex-column h-100 gap-4">
+                <p class="tab-content-text">
+                  Студентам-арабістам, дипломатам, політичним блогерам та загалом працівникам медіасфери, аналітикам, експертам-міжнародникам, а також всім, хто воліє вдосконалити знання арабської мови для карʼєри.
+                </p>
+                <p class="tab-content-text">
+                  Викладачам та репетиторам арабської мови - як допоміжний навчальний інструмент.
+                </p>
+              </div>
+            </div>
+            <div id="tab3" class="d-flex bg-white align-items-end tab-content z-1">
+              <div class="align-items-center flex-column col-4 d-none d-xxl-flex gap-4 mb-3">
+                <div class="tab-content-logo">
+                  <picture><source srcset="img/info/info-tab-logo.webp" type="image/webp"><img src="img/info/info-tab-logo.png" alt=""></picture>
+                </div>
+                <div class="d-flex align-items-center flex-column text-center">
+                  <span class="ff-sec text-clr-2 text-uppercase" style="font-size: 19px;letter-spacing: -0.0475rem;">Дипломатія війни</span>
+                  <span class="fs-5" style="color: #AFAFAF;">Посібник арабської мови</span>
+                </div>
+              </div>
+              <div class="d-flex flex-column h-100 gap-4">
+                <p class="tab-content-text">
+                  - Автономне інтерактивне навчання на будь-якому девайсі - ноутбуці, планшеті, телефоні або на декількох пристроях одночасно (вдома - на компʼютері, у дорозі - на смартфоні);
+                </p>
+                <p class="tab-content-text">
+                  - Сумарний досвід авторів (у т.ч. кандидатів філ. наук) у викладанні арабської мови, зокрема в провідних ВНЗ України складає 15 років;
+                </p>
+                <p class="tab-content-text">
+                  - Такий формат онлайн-посібника арабської мови - перший в Україні. Його формула - максимум результату за мінімум часу, у цікавій та зручній для сприйняття формі.
+                </p>
+              </div>
+            </div>
+            <div id="tab4" class="d-flex bg-white align-items-end tab-content z-1">
+              <div class="align-items-center flex-column col-4 d-none d-xxl-flex gap-4 mb-3">
+                <div class="tab-content-logo">
+                  <picture><source srcset="img/info/info-tab-logo.webp" type="image/webp"><img src="img/info/info-tab-logo.png" alt=""></picture>
+                </div>
+                <div class="d-flex align-items-center flex-column text-center">
+                  <span class="ff-sec text-clr-2 text-uppercase" style="font-size: 19px;letter-spacing: -0.0475rem;">Дипломатія війни</span>
+                  <span class="fs-5" style="color: #AFAFAF;">Посібник арабської мови</span>
+                </div>
+              </div>
+              <div class="d-flex flex-column h-100 gap-4">
+                <p class="tab-content-text">
+                  Автор ідеї – Ольга Сегеда (магістр східної філології, викладач і перекладач арабської мови, дипломат у 2019-2024 рр.). Співавтори – Ольга Мазніченко (к. філол. наук), Аліна Кучеренко (к. філол. наук).
+                </p>
+                <p class="tab-content-text">
+                  Редактори – Ольга Мазніченко (к. філол. наук), Олександр Балануца (д. педаг. наук, Посол України в Державі Кувейт).
+                </p>
+                <p class="tab-content-text">
+                  Рецензенти – Андрій Каращук (к. філол. наук), Олег Ніколенко (речник МЗС України).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-container-image">
+            <picture><source srcset="img/info/info-tab-image.webp" type="image/webp"><img src="img/info/info-tab-image.png" alt="tab-image"></picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-9 ms-xl-auto">
+      <div class="d-flex flex-column">
+          <div class="d-flex flex-wrap info-row mb-4 mb-xl-5">
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/wifi-icon.webp" type="image/webp"><img width="32px" src="img/icons/wifi-icon.png" alt="icon"></picture>
+              </div>
+              <p class="fw-bold text-clr-1">
+                100% автономний <br>
+                режим навчання
+              </p>
+            </div>
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/free-icon.webp" type="image/webp"><img style="width: 2rem;" src="img/icons/free-icon.png" alt="icon"></picture>
+              </div>
+                <p class="fw-bold text-clr-1">
+                  Відстеження <br>
+                  прогресу
+              </p>
+            </div>
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/lock-icon.webp" type="image/webp"><img style="width: 2rem;" src="img/icons/lock-icon.png" alt="icon"></picture>
+              </div>
+              <p class="fw-bold text-clr-1">
+                  Ключі <br>
+                  до вправ
+              </p>
+            </div>
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/chat-icon.webp" type="image/webp"><img style="width: 2rem;" src="img/icons/chat-icon.png" alt="icon"></picture>
+              </div>
+                <p class="fw-bold text-clr-1">
+                  Самоперевірка <br>
+                  з Chat GPT
+              </p>
+            </div>
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/browser-icon.webp" type="image/webp"><img style="width: 2rem;" src="img/icons/browser-icon.png" alt="icon"></picture>
+              </div>
+                <p class="fw-bold text-clr-1">
+                  Довідник <br>
+                  корисних ресурсів
+              </p>
+            </div>
+            <div class="d-flex align-items-center flex-column text-center col-6 col-md-4 col-sm-4 d-sm-block flex-sm-row px-2 text-sm-start">
+              <div class="d-flex align-items-center justify-content-center info-icon mb-3 rounded-2" style="background: linear-gradient(180deg, #FFE8D7 0%, #EEE6DB 100%);">
+                <picture><source srcset="img/icons/lighnting-icon.webp" type="image/webp"><img style="width: 2rem;" src="img/icons/lighnting-icon.png" alt="icon"></picture>
+              </div>
+                <p class="fw-bold text-clr-1">
+                  Ефективне <br>
+                  повторення
+              </p>
+            </div>
+          </div>
+          <div class="d-flex card-row mt-4 mt-xl-5">
+            <div class="card-block col-6 px-1 px-md-2 ps-0 ps-md-2">
+              <div class="h-100 card-item rounded-4">
+                <div class="d-flex flex-column justify-content-between h-100 card-content pe-4 pe-md-5 px-3 px-md-4 py-5 bg-white">
+                  <div class="ff-sec text-clr-2 card-title">
+                    СПРОБУЙТЕ
+                    БЕЗОПЛАТНО
+                  </div>
+                  <div class="">
+                    <div class="mb-5 card-content">
+                      <div class="fw-bold text-clr-1 mb-3">
+                        1 урок
+                      </div>
+                      <div class="fw-bold text-clr-1 fs-4">
+                        Без реєстрації
+                      </div>
+                    </div>
+                    <a href="#" class="fw-bold text-clr-1 button-primary button-primary--filled button-primary--md">
+                      <span>Почати </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-block col-6 px-1 px-md-2">
+              <div class="h-100 card-item rounded-4">
+                <div class="d-flex flex-column justify-content-between h-100 card-content pe-4 pe-md-5 px-3 px-md-4 py-5">
+                  <div class="ff-sec text-clr-2 card-title">
+                  отримайте <br> доступ
+                  </div>
+                  <div class="">
+                    <div class="mb-5 card-content">
+                      <div class="fw-bold text-clr-1 mb-3">
+                        до 30 онлайн-уроків для безлімітного <br> використання
+                      </div>
+                      <div class="fw-bold text-clr-1 fs-4">
+                        <span class="fs-1 info-span">400</span> грн
+                      </div>
+                    </div>
+                    <a href="#" class="fw-bold text-white button-primary button-primary--filled button-primary--md">
+                      <span>Придбати</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container w-100">
+    <div class="d-none position-relative bg-clr-2 d-lg-block footer-body rounded-bottom-4">
+      <a href="#home" class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn">
+        <div class="d-flex align-items-center flex-column to-top-btn__inner">
+          <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+          <picture><source srcset="img/icons/arrow-to-top.webp" type="image/webp"><img src="img/icons/arrow-to-top.png" width="14px" alt="arrow"></picture>
+        </div>
+      </a>
+      <div class="d-flex justify-content-between footer-top">
+        <div class="col-xxl-7 col-6">
+          <div class="d-flex">
+            <ul class="align-items-center gap-3 col-5 socials d-none d-xl-flex">
+              <li class="w-auto">
+                <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                  <picture><source srcset="img/socials/inst-icon.webp" type="image/webp"><img src="img/socials/inst-icon.png" alt="social-media-icon"></picture>
+                  <span class="socials-text">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <span class="d-block socials-divider"></span>
+              </li>
+              <li class="w-auto">
+                <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                  <picture><source srcset="img/socials/tg-icon.webp" type="image/webp"><img src="img/socials/tg-icon.png" alt="social-media-icon"></picture>
+                  <span class="socials-text">Telegram</span>
+                </a>
+              </li>
+            </ul>
+            <div class="me-5 col-5">
+              <div class="custom-lang custom-lang--white" style="width: fit-content;">
+                <div class="custom-lang-selected">
+                  <picture><source srcset="img/flags/no-round-ua-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/no-round-ua-flag.png" alt="flag-icon"></picture>
+                  <span class="custom-lang-text">Українська</span>
+                  <div>
+                    <svg class="custom-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="">
+                      <circle opacity="1" cx="10" cy="10" r="10" fill=""/>
+                      <path d="M14 9L10 13L6 9" stroke="" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+                <div class="custom-lang-hidden">
+                  <ul class="custom-lang-list">
+                    <li class="custom-lang-item">
+                      <picture><source srcset="img/flags/ae-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/ae-flag.png" alt="flag-icon"></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden">Арабська</span>
+                    </li>
+                    <li class="custom-lang-item">
+                      <picture><source srcset="img/flags/eng-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/eng-flag.png" alt="flag-icon"></picture>
+                      <span class="custom-lang-text custom-lang-text--hidden">Англійська</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-logo-block">
+            <picture><source srcset="img/footer/logo-min.webp" type="image/webp"><img class="footer-logo mb-4" src="img/footer/logo-min.png" alt="footer-logo"></picture>
+            <div class="fw-bold ff-sec d-none d-xxl-block display-4 text-white uppercase" style="letter-spacing: -0.07rem;">
+              ДИПЛОМАТІЯ ВІЙНИ
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-start col-6 col-xl-4">
+          <ul class="d-flex flex-column gap-4 footer-nav">
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Всі уроки
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Аудіоуроки
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Оглядовий урок
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Особистий кабінет
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Блог
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Рецензії
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column justify-content-between align-items-start col-5 flex-xl-row h-100">
+            <a href="mailto:mail@gmail.com" class="d-flex align-items-center gap-2 footer-mail-link">
+              <picture><source srcset="img/icons/email-icon.webp" type="image/webp"><img src="img/icons/email-icon.png" width="20px" height="20px" alt="email-link"></picture>
+              <span class="fw-bold text-white lh-1">Напишіть нам</span>
+            </a>
+            <ul class="d-flex align-items-center flex-column col-5 d-xl-none gap-3 socials">
+              <li class="w-auto">
+                <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                  <picture><source srcset="img/socials/inst-icon.webp" type="image/webp"><img src="img/socials/inst-icon.png" alt="social-media-icon"></picture>
+                  <span class="socials-text">Instagram</span>
+                </a>
+              </li>
+              <li class="w-auto">
+                <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                  <picture><source srcset="img/socials/tg-icon.webp" type="image/webp"><img src="img/socials/tg-icon.png" alt="social-media-icon"></picture>
+                  <span class="socials-text">Telegram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center footer-bottom justify-content-between">
+        <div class="row col-6 col-xl-7">
+          <div class="d-none col-5 d-xl-block footer-rights p-0">
+            Посібник арабської мови. 2023
+          </div>
+          <div class="p-0 footer-rights col-4">
+            © Всі права захищені
+          </div>
+        </div>
+        <div class="align-items-center col-6 col-xl-4 row">
+            <a href="#" aria-label="Link to
+            contract offer" class="p-0 footer-rights footer-bottom-link col-6">
+              Договір оферти
+            </a>
+            <ul class="d-flex col p-0" style="grid-gap: 2rem;">
+              <li>
+                <picture><source srcset="img/footer/visa--white.webp" type="image/webp"><img src="img/footer/visa--white.png" alt="visa-icon"></picture>
+              </li>
+              <li>
+                <picture><source srcset="img/footer/master-card--white.webp" type="image/webp"><img src="img/footer/master-card--white.png" alt="mastercard-icon"></picture>
+              </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="d-block bg-clr-2 d-lg-none footer-body position-relative rounded-bottom-4">
+      <a href="#home" class="d-flex justify-content-center bg-white position-absolute rounded-circle to-top-btn">
+        <div class="d-flex align-items-center flex-column to-top-btn__inner">
+          <span class="fw-semibold d-block mb-3 text-clr-2">Нагору</span>
+          <picture><source srcset="img/icons/arrow-to-top.webp" type="image/webp"><img src="img/icons/arrow-to-top.png" width="14px" alt="arrow"></picture>
+        </div>
+      </a>
+      <div class="d-flex flex-column justify-content-between footer-top">
+        <div class="d-flex justify-content-between align-items-start col-12">
+          <ul class="d-flex flex-column gap-4 footer-nav">
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Всі уроки
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Аудіоуроки
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Оглядовий урок
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Особистий кабінет
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Блог
+              </a>
+            </li>
+            <li>
+              <a href="#" class="fw-semibold footer-nav-link">
+                Рецензії
+              </a>
+            </li>
+          </ul>
+          <div class="custom-lang custom-lang--white" style="width: fit-content;">
+            <div class="custom-lang-selected">
+              <picture><source srcset="img/flags/no-round-ua-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/no-round-ua-flag.png" alt="flag-icon"></picture>
+              <span class="custom-lang-text">Українська</span>
+              <div>
+                <svg class="custom-lang-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="">
+                  <circle opacity="1" cx="10" cy="10" r="10" fill=""/>
+                  <path d="M14 9L10 13L6 9" stroke="" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+            </div>
+            <div class="custom-lang-hidden">
+              <ul class="custom-lang-list">
+                <li class="custom-lang-item">
+                  <picture><source srcset="img/flags/ae-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/ae-flag.png" alt="flag-icon"></picture>
+                  <span class="custom-lang-text custom-lang-text--hidden">Арабська</span>
+                </li>
+                <li class="custom-lang-item">
+                  <picture><source srcset="img/flags/eng-flag.webp" type="image/webp"><img class="custom-lang-flag" src="img/flags/eng-flag.png" alt="flag-icon"></picture>
+                  <span class="custom-lang-text custom-lang-text--hidden">Англійська</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex" style="margin-top: 4.5rem;">
+          <ul class="d-flex align-items-center col-12 gap-4 socials">
+            <li class="w-auto">
+              <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                <picture><source srcset="img/socials/inst-icon.webp" type="image/webp"><img src="img/socials/inst-icon.png" alt="social-media-icon"></picture>
+                <span class="socials-text">Instagram</span>
+              </a>
+            </li>
+
+            <li class="w-auto">
+              <a class="d-flex align-items-center gap-2 socials-link" href="#" target="_blank" aria-label="Link to social media">
+                <picture><source srcset="img/socials/tg-icon.webp" type="image/webp"><img src="img/socials/tg-icon.png" alt="social-media-icon"></picture>
+                <span class="socials-text">Telegram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex align-items-center col-12 gap-3 mt-5">
+          <div>
+            <picture><source srcset="img/footer/logo-min.webp" type="image/webp"><img width="55px" src="img/footer/logo-min.png" alt="footer-logo"></picture>
+          </div>
+          <div class="d-flex flex-column justify-content-between h-100 flex-xl-row col">
+            <a href="mailto:mail@gmail.com" class="d-flex align-items-center gap-2 footer-mail-link">
+              <picture><source srcset="img/icons/email-icon.webp" type="image/webp"><img src="img/icons/email-icon.png" width="20px" height="20px" alt="email-link"></picture>
+              <span class="fw-bold text-white lh-1">Напишіть нам</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center flex-column footer-bottom justify-content-between">
+        <ul class="d-flex col-12 mb-4 p-0" style="grid-gap: 2rem;">
+          <li>
+            <picture><source srcset="img/footer/visa--white.webp" type="image/webp"><img width="52px" src="img/footer/visa--white.png" alt="visa-icon"></picture>
+          </li>
+          <li>
+            <picture><source srcset="img/footer/master-card--white.webp" type="image/webp"><img width="102px" src="img/footer/master-card--white.png" alt="mastercard-icon"></picture>
+          </li>
+        </ul>
+        <div class="d-flex gap-4 col-12">
+          <div class="p-0 footer-rights" style="font-size: 0.75rem;">
+            © Всі права захищені
+          </div>
+          <a href="#" style="font-size: 0.75rem;" aria-label="Link to
+          contract offer" class="p-0 footer-rights footer-bottom-link">
+            Договір оферти
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js?_v=20230822181325" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js?_v=20230822181325" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

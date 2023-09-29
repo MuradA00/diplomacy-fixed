@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+  @include('partials/head.html')
+
+  <body>
+    <main>
+      <section class="login">
+        <div class="container">
+          <div class="login__wrapper">
+            <!-- header -->
+            <div class="d-flex justify-content-end align-items-center rl-close">
+					<div
+					  class="login__close d-flex justify-content-center align-items-center"
+					>
+					  <picture
+						 ><source
+							srcset="img/login/close.webp"
+							type="image/webp" />
+						 <img src="img/login/close.png" alt="logo"
+					  /></picture>
+					</div>
+				 </div>
+            </div>
+            <!-- content -->
+				<div
+                class="login__header--logo col-12 justify-content-center"
+              >
+                <a href="/" class="header-logo">
+                  <picture
+                    ><source
+                      srcset="img/header/header-logo.webp"
+                      type="image/webp" />
+                    <img src="img/header/header-logo.png" alt="logo"
+                  /></picture>
+                </a>
+              </div>
+            <!-- content -->
+            <div
+              class="login__content col-xl-5 col-xxl-4 col-lg-6 col-md-8 mx-auto col-12"
+            >
+              <div class="login-content__title fw-bold ff-sec">
+                ВХІД В ОСОБИСТИЙ КАБІНЕТ
+              </div>
+              <form action="#" method="#">
+                <div class="login-content__username--email">
+                  <div class="login-content-username--email__icon">
+                    <picture
+                      ><source
+                        srcset="img/login/login-username.webp"
+                        type="image/webp" />
+                      <img src="img/login/login-username.svg" alt="logo"
+                    /></picture>
+                  </div>
+                  <input
+                    type="text"
+                    class="login-content-username--email__input"
+                    placeholder="Пошта або ім’я користувача"
+                  />
+                </div>
+                <div class="login-content__password">
+                  <div class="login-content-password__icon">
+                    <picture
+                      ><source
+                        srcset="img/login/login-password.webp"
+                        type="image/webp" />
+                      <img src="img/login/login-password.svg" alt="logo"
+                    /></picture>
+                  </div>
+                  <input
+                    type="password"
+                    class="login-content-password__input"
+                    placeholder="Пороль"
+                  />
+                  <div class="login-content-see__icon">
+                    <picture
+                      ><source
+                        srcset="img/login/eye.webp"
+                        type="image/webp" />
+                      <img src="img/login/eye.png" alt="logo"
+                    /></picture>
+                  </div>
+                </div>
+                <div
+                  class="login-content__enter d-flex justify-content-between"
+                >
+                  <button class="login-content-enter__btn fw-bold">
+                  <span>Увійти</span>
+                  </button>
+                  <button class="login-content-enter__forget fw-semibold">
+                    Забули пороль?
+                  </button>
+                </div>
+                <div
+                  class="login-content__another d-flex justify-content-between align-items-center"
+                >
+                  <button
+                    class="login-content-another__google d-flex align-items-center"
+                  >
+                    <div
+                      class="login-content-another__icon d-flex justify-content-center align-items-center"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/login/login-google.webp"
+                          type="image/webp" />
+                        <img src="img/login/login-google.png" alt="logo"
+                      /></picture>
+                    </div>
+                    <div class="login-content-another__text fw-bold">
+                      Увійти з Google
+                    </div>
+                  </button>
+                  <button
+                    class="login-content-another__facebook d-flex align-items-center"
+                  >
+                    <div
+                      class="login-content-another__icon d-flex justify-content-center align-items-center"
+                    >
+                      <picture
+                        ><source
+                          srcset="img/login/login-facebook.webp"
+                          type="image/webp" />
+                        <img src="img/login/login-facebook.png" alt="logo"
+                      /></picture>
+                    </div>
+                    <div class="login-content-another__text fw-bold">
+                      Увійти з Facebook
+                    </div>
+                  </button>
+                </div>
+                <button
+                  class="login-content__create d-flex justify-content-center align-items-center fw-bold"
+                >
+                 <span>Створити обліковий запис</span>
+                </button>
+                <div class="login-content-agree">
+                  Виконуючи вхід до облікового запису
+                  <a href="#">Дипломатії війни</a>, ви погоджуєтесь з нашими
+                  <a href="#">Умовами та політикою конфіденційності</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js?_v=20230822181325" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js?_v=20230822181325" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
