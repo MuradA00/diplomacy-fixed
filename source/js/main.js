@@ -97,7 +97,7 @@ $(document).ready(function () {
 	// Проверяем, что класс "active" отсутствует и поле textarea не пустое
 	if (!mliqlBox.hasClass("active") && textareaValue.trim() !== "") {
 		 mliqlBox.addClass("active");
-		 spanElement.text("Очистити");
+		 spanElement.text("Скинути");
 		 setTimeout(function() {
 			  $(".mliql__gpt").addClass("active");
 		 }, 300);
@@ -106,8 +106,11 @@ $(document).ready(function () {
 		 $(".mliql__gpt").removeClass("active");
 		 spanElement.text("Запитати у Chat GPT");
 	}
+
+  console.log("Click event handled");
 });
-$(".mliqr-send").click(function() {
+
+$(".mliqr--sp .mliqr-send").click(function() {
 	var spanElement = $(this).find("span");
 	var mliqlBox = $(".mliql__box");
 	var textareaValue = mliqlBox.find("textarea").val();
@@ -125,7 +128,6 @@ $(".mliqr-send").click(function() {
 		 spanElement.text("Запитати у Chat GPT");
 	}
 });
-
 
 
 
@@ -373,36 +375,36 @@ $(".mliqr-send").click(function() {
   });
 
   $(".js-selectCustom").each(function () {
-    const $elSelectCustom = $(this);
-    const $elSelectCustomValue = $elSelectCustom.children().eq(0);
-    const $elSelectCustomOptions = $elSelectCustom.children().eq(1);
-    const defaultLabel = $elSelectCustomValue.data("value");
+	const $elSelectCustom = $(this);
+	const $elSelectCustomValue = $elSelectCustom.children().eq(0);
+	const $elSelectCustomOptions = $elSelectCustom.children().eq(1);
+	const defaultLabel = $elSelectCustomValue.data("value");
 
-    // Listen for each custom option click
-    $elSelectCustomOptions.children().each(function () {
-      $(this).on("click", function (e) {
-        // Update custom select text too
-        $elSelectCustomValue.text($(this).text());
-        // Close select
-        $elSelectCustom.removeClass("isActive");
-      });
-    });
+	// Listen for each custom option click
+	$elSelectCustomOptions.children().each(function () {
+	  $(this).on("click", function (e) {
+		 // Update custom select text too
+		 $elSelectCustomValue.html($(this).html());
+		 // Close select
+		 $elSelectCustom.removeClass("isActive");
+	  });
+	});
 
-    // Toggle select on label click
-    $elSelectCustomValue.on("click", function (e) {
-      $elSelectCustom.toggleClass("isActive");
-    });
+	// Toggle select on label click
+	$elSelectCustomValue.on("click", function (e) {
+	  $elSelectCustom.toggleClass("isActive");
+	});
 
-    // Close the custom select when clicking outside
-    $(document).on("click", function (e) {
-      const didClickedOutside =
-        !$elSelectCustom.is(e.target) &&
-        $elSelectCustom.has(e.target).length === 0;
-      if (didClickedOutside) {
-        $elSelectCustom.removeClass("isActive");
-      }
-    });
-  });
+	// Close the custom select when clicking outside
+	$(document).on("click", function (e) {
+	  const didClickedOutside =
+		 !$elSelectCustom.is(e.target) &&
+		 $elSelectCustom.has(e.target).length === 0;
+	  if (didClickedOutside) {
+		 $elSelectCustom.removeClass("isActive");
+	  }
+	});
+ });
 
   $(".login-content-see__icon").click(function () {
     var passwordInput = $(".login-content-password__input");
@@ -466,25 +468,85 @@ $(".mliqr-send").click(function() {
     $(".main-lessons-item__record .audio-expirience__voice").addClass("active");
   });
   // Дублируем контент внутри .content
-  var $content = $(".error-illustation__camels--black");
+  var $content = $(".error-illustation__camels--black, .error-illustration-camels__white");
   var $originalContent = $content.html();
   $content.append($originalContent).append($originalContent);
 
   // Запускаем анимацию движения для <picture class="error-illustation__camels--black">
   function startBlackCamelsAnimation() {
     $content
-      .find(".error-illustation__camels--black img")
+      .find(".error-illustation__camels--black img, .error-illustration-camels__white img")
       .css("animation-play-state", "running");
   }
 
-  // Запускаем анимации
+  $('.audio-aside-field-dictionary__see-all').click(function() {
+	$(this).toggleClass('active'); // Добавляем/удаляем класс 'active'
+	var span = $(this).find('span'); // Находим вложенный элемент span
+	if (span.text() === ' Розгорнути словник') {
+		 span.text('Згорнути словник'); // Изменяем текст на 'Згорнути словник'
+	} else {
+		 span.text(' Розгорнути словник'); // Возвращаем исходный текст
+	}
 });
 
+var isAnimating = false;
 
+// Обработчик клика на элементе .audio-expirience-voice-left__start
+$('.audio-expirience-voice-left__start').on('click', function() {
+	var $voiceBlock = $(this).closest('.audio-expirience__voice'); // Находим родительский блок .audio-expirience__voice
+	var $round = $voiceBlock.find('.round'); // Находим элемент .round внутри текущего блока .audio-expirience__voice
 
+	if (!isAnimating) {
+	  // Запустить анимацию при первом клике
+	  $round.css('stroke-dasharray', '245.681, 245.681');
+	  $round.css('transition', 'stroke-dasharray 10s linear');
+	  $round.css('opacity', '1'); // Сделать элемент видимым
+	  $round.css('pointer-events', 'auto'); // Включить взаимодействие с элементом
+	} else {
+	  // Остановить анимацию при повторном клике и сохранить текущее значение stroke-dasharray
+	  var currentDashArray = $round.css('stroke-dasharray');
+	  $round.css('stroke-dasharray', currentDashArray);
+	  $round.css('transition', 'none');
+	}
+	isAnimating = !isAnimating;
+ });
+
+ // Обработчик клика на элементе .aelri-delete
+ $('.aelri-delete').on('click', function() {
+	var $voiceBlock = $(this).closest('.audio-expirience__voice'); // Находим родительский блок .audio-expirience__voice
+	var $round = $voiceBlock.find('.round'); // Находим элемент .round внутри текущего блока .audio-expirience__voice
+
+	$round.removeClass('animating');
+	$round.css('stroke-dasharray', '0, 999');
+	$round.css('transition', 'none');
+	$round.css('opacity', '0'); // Сделать элемент прозрачным
+	$round.css('pointer-events', 'none'); // Отключить взаимодействие с элементом
+ });
+
+  $(".lessons-content-top-btn").click(function(e) {
+	e.preventDefault(); // Отменяем действие по умолчанию (прокрутку наверх)
+
+	var $infoBlock = $(this).siblings(".lessons-content-top__info");
+	var $imageContainer = $(this).closest(".lessons-inner").find(".lessons-image__container");
+	var $content = $(this).closest(".lessons-inner").find(".lessons-content");
+
+	if ($infoBlock.height() === 0) {
+		 var contentHeight = $infoBlock.prop('scrollHeight');
+		 $infoBlock.animate({ height: contentHeight }, 500);
+		 $imageContainer.animate({ height: "0" }, 500);
+		 $content.animate({ height: "100%" }, 500);
+	} else {
+		 $infoBlock.animate({ height: 0 }, 500);
+		 $imageContainer.animate({ "height" : "18rem" }, 500); // Устанавливаем высоту в 18rem
+		 $content.css("height", ""); // Удаление стиля height
+	}
+});
+
+});
 if (Swiper) {
   const quotersSlider = new Swiper('.lessons-swiper', {
 		slidesPerView: 1,
+    autoHeight: true,
     breakpoints: {
       992: {
         slidesPerView: 2
