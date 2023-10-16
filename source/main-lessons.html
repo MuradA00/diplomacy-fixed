@@ -174,22 +174,48 @@
             </a>
             <div class="breadcrumpts__current">Уроки</div>
           </div>
-          <div class="main-lessons__wrapper d-flex">
-            <div class="col-xl-3 col-12">
-              <div class="main-lessons-left-top-box">
-                <h2 class="fw-bold audio-lessons-title">УРОК 1</h2>
-                <div class="audio-lessons-text__box d-flex">
-                  <div
-                    class="fw-bold audio-lessons-subtext ff-sec"
-                    style="margin-right: 2.5rem"
-                  >
-                    ВАШ РЕЗУЛЬТАТ
-                  </div>
-                  <div class="ff-sec fw-bold audio-lessons-percent">
-                    <span>67</span> %
-                  </div>
+          <div class="main-lessons__row">
+            <div class="main-lessons-left-top-box col-xl-3 col-12">
+              <h2 class="fw-bold audio-lessons-title">УРОК 1</h2>
+              <div class="audio-lessons-text__box d-flex">
+                <div
+                  class="fw-bold audio-lessons-subtext ff-sec"
+                  style="margin-right: 2.5rem"
+                >
+                  ВАШ РЕЗУЛЬТАТ
+                </div>
+                <div class="ff-sec fw-bold audio-lessons-percent">
+                  <span>67</span> %
                 </div>
               </div>
+            </div>
+            <div class="audio-top__progress d-flex col-xl-9 col-12">
+              <div
+                class="audio-top-progress__items justify-content-between d-flex gap-1"
+              >
+                <div class="audio-top-progress-item active green"></div>
+                <div class="audio-top-progress-item green"></div>
+                <div class="audio-top-progress-item green"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+                <div class="audio-top-progress-item"></div>
+              </div>
+              <div class="audio-top-progress__list fw-bold green">
+                <span>1/</span><span>15</span>
+              </div>
+            </div>
+          </div>
+          <div class="main-lessons__wrapper d-flex">
+            <div class="main-lessons__flexbox col-xl-3 col-12">
               <div
                 class="audio-top__progress d-none main-lessons-left-top-audio-top__progress"
               >
@@ -256,15 +282,9 @@
 							/></picture></div>
 							<a href="#" class="audio-tabs-mob-dropdown-closed__btn atmdcb d-flex align-items-center justify-content-center">
 								<div class="atmdcb__icon">
-									<picture
-									><source
-									  srcset="img/main-lessons/lock.webp"
-									  type="image/webp" />
-									<img
-									  src="img/main-lessons/lock.svg"
-									  width="20"
-									  alt="arrow"
-								 /></picture>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.65715 4.46153C5.65715 2.54978 7.19217 1 9.08569 1H10.9143C12.8078 1 14.3428 2.54978 14.3428 4.46153V6.75384C14.7902 6.78975 15.2071 6.82615 15.5719 6.85952C16.7515 6.96744 17.6877 7.90379 17.7948 9.09955C17.8905 10.1665 18 11.6325 18 12.7692C18 13.9059 17.8905 15.372 17.7948 16.439C17.6877 17.6347 16.7515 18.5711 15.5719 18.679C14.09 18.8145 11.7478 19 10 19C8.25218 19 5.90994 18.8145 4.4281 18.679C3.24856 18.5711 2.31228 17.6347 2.20514 16.439C2.10953 15.372 2 13.9059 2 12.7692C2 11.6325 2.10953 10.1665 2.20514 9.09955C2.31228 7.90379 3.24856 6.96744 4.4281 6.85952C4.79288 6.82615 5.2098 6.78975 5.65715 6.75384V4.46153ZM6.38805 8.08615C6.39171 8.08592 6.39536 8.08565 6.399 8.08535C7.601 7.99678 8.92498 7.92308 10 7.92308C11.075 7.92308 12.399 7.99678 13.601 8.08535C13.6046 8.08565 13.6083 8.08592 13.6119 8.08615C14.2843 8.13577 14.918 8.18998 15.4481 8.23852C15.9728 8.28649 16.382 8.6995 16.429 9.22429C16.5242 10.2861 16.6285 11.6994 16.6285 12.7692C16.6285 13.8391 16.5242 15.2523 16.429 16.3141C16.382 16.839 15.9728 17.2519 15.4481 17.3C13.9677 17.4354 11.6799 17.6153 10 17.6153C8.32009 17.6153 6.03226 17.4354 4.55187 17.3C4.02722 17.2519 3.61802 16.839 3.57099 16.3141C3.47584 15.2523 3.37143 13.8391 3.37143 12.7692C3.37143 11.6994 3.47584 10.2861 3.57099 9.22429C3.61802 8.69941 4.02722 8.28649 4.55187 8.23852C5.08204 8.18998 5.71577 8.13577 6.38805 8.08615ZM12.9715 6.65369C11.9556 6.58756 10.8992 6.53846 10 6.53846C9.1008 6.53846 8.04432 6.58756 7.02857 6.65369V4.46153C7.02857 3.31448 7.94958 2.38461 9.08569 2.38461H10.9143C12.0504 2.38461 12.9715 3.31448 12.9715 4.46153V6.65369ZM10 11.1539C10.3787 11.1539 10.6857 11.4638 10.6857 11.8462V13.6923C10.6857 14.0747 10.3787 14.3846 10 14.3846C9.62133 14.3846 9.31431 14.0747 9.31431 13.6923V11.8462C9.31431 11.4638 9.62133 11.1539 10 11.1539Z" fill=""></path>
+                    </svg>
 								</div>
 								<div class="atmdcb__text">Отримати доступ</div>
 							</a>
@@ -700,30 +720,6 @@
               </div>
             </div>
             <div class="col-xl-9 col-12 main-lessons__content">
-              <div class="audio-top__progress d-flex">
-                <div
-                  class="audio-top-progress__items justify-content-between d-flex gap-1"
-                >
-                  <div class="audio-top-progress-item active green"></div>
-                  <div class="audio-top-progress-item green"></div>
-                  <div class="audio-top-progress-item green"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                  <div class="audio-top-progress-item"></div>
-                </div>
-                <div class="audio-top-progress__list fw-bold green">
-                  <span>1/</span><span>15</span>
-                </div>
-              </div>
               <div class="main-lessons-banner">
                 <div class="main-lessons-banner__img">
                   <picture
@@ -886,15 +882,23 @@
                             alt="symbol"
                         /></picture>
                       </div>
-                      <div
+                      <button
                         class="audio-translate__button audio-top-tr d-flex align-items-center justify-content-center fw-bold"
                       >
-                        Переклад
-                          <img
-                            src="img/audio/translate.svg"
-                            width="20"
-                            alt="arrow"/>
-                      </div>
+                        <span>Переклад</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_543_11007)">
+                          <path d="M10.7909 12.7956L8.48182 10.5137L8.5091 10.4865C10.0909 8.72282 11.2182 6.69556 11.8818 4.55009H14.5455V2.72738H8.18182V0.90918H6.36363V2.72738H0V4.53645H10.1545C9.5409 6.29099 8.5818 7.95462 7.2727 9.4092C6.42725 8.46829 5.72723 7.44556 5.1727 6.36373H3.35455C4.01817 7.84553 4.92729 9.24556 6.06363 10.5092L1.4409 15.0774L2.72727 16.3637L7.27275 11.8183L10.1 14.6456L10.7909 12.7956Z" fill=""/>
+                          <path d="M15.9091 8.18164H14.0909L10 19.0907H11.8182L12.8409 16.3635H17.1591L18.1818 19.0907H20L15.9091 8.18164ZM13.5227 14.5453L15 10.6044L16.4773 14.5453H13.5227Z" fill=""/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_543_11007">
+                          <rect width="20" height="20" fill=""/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2773,9 +2777,9 @@
                   </div>
                 </div>
                 <div
-                  class="main-lessons-item-footer__bottom mlifb d-flex justify-content-between"
+                  class="main-lessons-item-footer__bottom mlifb flex-column flex-sm-row d-flex justify-content-between"
                 >
-                  <div class="mlifb__title ff-sec fw-bold">ЦІКАВО ЗНАТИ</div>
+                  <div class="mlifb__title ff-sec fw-bold mb-2 mb-sm-0">ЦІКАВО ЗНАТИ</div>
                   <div class="mlifb__text fw-bold">
                     Онлайн-ресурси на кшталт <a href="#">almaany.com</a> чи
                     <a href="#">context.reverso.net</a> пропонують не лише

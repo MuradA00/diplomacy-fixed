@@ -85,21 +85,21 @@ $(document).ready(function () {
   $(".audio-expirience-pages-btn__next").click(function () {
     var nextButton = $(this);
 
-    nextButton.addClass("hover-effect");
+  //   nextButton.addClass("hover-effect");
 
-    setTimeout(function () {
-      nextButton.removeClass("hover-effect");
-    }, 500); // Удаление класса через 1 секунду (1000 миллисекунд)
-  });
+  //   setTimeout(function () {
+  //     nextButton.removeClass("hover-effect");
+  //   }, 500); // Удаление класса через 1 секунду (1000 миллисекунд)
+  // });
 
-  $(".audio-expirience-pages-btn-back").click(function () {
-    var nextButton = $(this);
+  // $(".audio-expirience-pages-btn-back").click(function () {
+  //   var nextButton = $(this);
 
-    nextButton.addClass("hover-effect");
+  //   nextButton.addClass("hover-effect");
 
-    setTimeout(function () {
-      nextButton.removeClass("hover-effect");
-    }, 500); // Удаление класса через 1 секунду (1000 миллисекунд)
+  //   setTimeout(function () {
+  //     nextButton.removeClass("hover-effect");
+  //   }, 500); // Удаление класса через 1 секунду (1000 миллисекунд)
   });
   $(".mliqr-reset").click(function () {
     var spanElement = $(this).find("span");
@@ -615,7 +615,6 @@ $(document).ready(function () {
 if (Swiper) {
   const quotersSlider = new Swiper('.lessons-swiper', {
 		slidesPerView: 1,
-    autoHeight: true,
     breakpoints: {
       992: {
         slidesPerView: 2
@@ -624,8 +623,18 @@ if (Swiper) {
     spaceBetween: 20,
     speed: 500,
     autoplay: {
+      disableOnInteraction: true,
       delay: 3000,
-      disableOnInteraction: false,
     }
+  })
+  const swiperBtns = document.querySelectorAll('.lessons-content-top-btn');
+
+  swiperBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const btnText = btn.querySelector('span');
+      quotersSlider.autoplay.stop();
+      btn.classList.toggle('btn-selected');
+      btn.classList.contains('btn-selected') ? btnText.textContent = 'Згорнути' : btnText.textContent = "Детальніше"
+    })
   })
 }
